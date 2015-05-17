@@ -42,8 +42,10 @@
 
 	</header>
 
+	<?php
+	if ( function_exists('yoast_breadcrumb') ) :
+		yoast_breadcrumb('<nav class="chrico-breadcrumbs">','</nav>');
+	endif;
+	?>
+
 	<main class="chrico-main" role="main">
-		<?php
-		if ( function_exists('yoast_breadcrumb') ) :
-			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-		endif;
