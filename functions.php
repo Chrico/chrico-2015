@@ -39,11 +39,11 @@ function chrico_setup() {
 	 * template |   size    |   device  | note
 	 * -----------------------------------------
 	 * single   |   945x485 |   tablet  | also used for desktop --> medium
-	 * archive  |   796x408 |   mobile  | 1-columnar            --> post-thumbnail
+	 * archive  |   690x354 |   mobile  | 1-columnar            --> post-thumbnail
 	 * archive  |   440x225 |   tablet  | 2-columnar
 	 * archive  |   332x170 |   desktop | 3-columnar
 	 */
-	set_post_thumbnail_size( 796, 408 );
+	set_post_thumbnail_size( 690, 354 );
 
 	// general template helpers
 	include_once( $vendor_dir . 'chrico/general.php' );
