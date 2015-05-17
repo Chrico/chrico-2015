@@ -320,6 +320,12 @@ input[type="search"] {
           box-sizing: border-box;
 }
 
+@media (max-width: 54.85714em) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 body {
   font: 14px/1.7 Imprima, Tahoma, Arial, sans-serif;
   background: #dadada url("../img/pattern.png");
@@ -328,7 +334,6 @@ body {
 }
 @media (max-width: 54.85714em) {
   body {
-    overflow-x: hidden;
     z-index: 9;
     -webkit-transition: all 0.5s ease-in;
             transition: all 0.5s ease-in;

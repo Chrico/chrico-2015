@@ -6,6 +6,16 @@ input[type="search"] {
   box-sizing: border-box;
 }
 
+
+//****************************************************************************
+// ______________ HTML
+
+html {
+  @include breakpoint(tablet) {
+	overflow-x: hidden;
+  }
+}
+
 //****************************************************************************
 // ______________ Body
 
@@ -16,7 +26,6 @@ body {
   position: relative;
 
   @include breakpoint(tablet) {
-	overflow-x: hidden;
 	z-index: 9;
 	transition: all 0.5s ease-in;
 	transform: translate3d(0, 0, 0);

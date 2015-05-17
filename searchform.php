@@ -22,7 +22,7 @@
 		endif;
 		?>
 		<span class="chrico-search__field <?php echo $class; ?>">
-			<input itemprop="query-input" id="s" name="s" type="text" class="chrico-search__input" value="<?php the_search_query(); ?>" />
+			<input itemprop="query-input" id="s" name="s" type="text" class="chrico-search__input" value="<?php the_search_query(); ?>" autocomplete="off" />
 
 			<label class="chrico-search__label" for="s">
 				<span class="chrico-search__label-text">
