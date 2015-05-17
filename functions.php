@@ -64,7 +64,6 @@ function chrico_setup() {
 		// scripts
 		include_once( $vendor_dir . 'chrico/frontend/script.php' );
 		add_action( 'wp_enqueue_scripts', 'chrico_wp_enqueue_scripts' );
-		add_filter( 'wp_print_scripts', 'chrico_filter_wp_print_scripts_add_html5shiv' );
 
 		// styles
 		include_once( $vendor_dir . 'chrico/frontend/style.php' );

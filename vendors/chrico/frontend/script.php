@@ -113,14 +113,3 @@ function chrico_get_scripts() {
 
 	return apply_filters( 'chrico_get_scripts', $scripts );
 }
-
-/**
- * Adding html5shiv to the header for older IE's
- *
- * @since   1.0.1
- * @wp-hook wp_print_scripts
- * @return  void
- */
-function chrico_filter_wp_print_scripts_add_html5shiv() {
-	echo '<script async> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>';
-}
