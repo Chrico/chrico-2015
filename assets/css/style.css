@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -580,29 +579,6 @@ video {
 
 .chrico-post__link {
   display: block;
-  /*
- * TODO: helle Bilder und so mit wei├ƒen Text drauf..
- *
-  // add blur effect for archive pages
-  .chrico-post--is-archive & {
-	overflow: hidden;
-	position: relative;
-
-	@include hover-state {
-	  img {
-		filter: blur(3px);
-	  }
-	  .chrico-post__link-read-more {
-		opacity: 1;
-	  }
-	}
-
-	img,
-	.chrico-post__link-read-more {
-	  transition: all 0.5s ease-in;
-	}
-  }
-  */
 }
 .chrico-post__link:hover, .chrico-post__link:active, .chrico-post__link:focus {
   border: 0;
@@ -611,25 +587,6 @@ video {
   display: block;
 }
 
-/*
-.chrico-post__link-read-more {
-  opacity: 0;
-  font-size: 20px;
-  width: 50%;
-  overflow: hidden;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height:40px;
-  line-height:36px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-align: center;
-}
-*/
 .chrico-post--is-singular .chrico-post__excerpt {
   font-weight: 600;
 }
