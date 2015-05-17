@@ -1,3 +1,6 @@
+//****************************************************************************
+// ______________ Post
+
 .post {
 
 }
@@ -22,50 +25,49 @@
   img {
 	display: block;
   }
-  /*
- * TODO: helle Bilder und so mit weißen Text drauf..
- *
-  // add blur effect for archive pages
-  .chrico-post--is-archive & {
-	overflow: hidden;
-	position: relative;
 
-	@include hover-state {
-	  img {
-		filter: blur(3px);
-	  }
-	  .chrico-post__link-read-more {
-		opacity: 1;
-	  }
-	}
+// TODO: helle Bilder und so mit weißen Text drauf..
+//	add blur effect for archive pages
+//  .chrico-post--is-archive & {
+//		overflow: hidden;
+//		position: relative;
+//
+//		@include hover-state {
+//	 		img {
+//				filter: blur(3px);
+//	  	}
+//	  	.chrico-post__link-read-more {
+//			opacity: 1;
+//	  	}
+//	}
+//
+//		img,
+//		.chrico-post__link-read-more {
+//	  		transition: all 0.5s ease-in;
+//		}
+//	}
 
-	img,
-	.chrico-post__link-read-more {
-	  transition: all 0.5s ease-in;
-	}
-  }
-  */
 }
 
-/*
-.chrico-post__link-read-more {
-  opacity: 0;
-  font-size: 20px;
-  width: 50%;
-  overflow: hidden;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height:40px;
-  line-height:36px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-align: center;
-}
-*/
+//
+//.chrico-post__link-read-more {
+//  opacity: 0;
+//  font-size: 20px;
+//  width: 50%;
+//  overflow: hidden;
+//  margin: auto;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  bottom: 0;
+//  right: 0;
+//  height:40px;
+//  line-height:36px;
+//  border: 2px solid #fff;
+//  color: #fff;
+//  text-align: center;
+//}
+
 
 // post_content
 .chrico-post__content {
@@ -91,7 +93,6 @@
 }
 
 //****************************************************************************
-
 // ______________ Archive-Posts
 
 .chrico-post--is-archive {
