@@ -1,0 +1,34 @@
+//****************************************************************************
+// ______________ Header
+
+.chrico-header {
+
+}
+
+.chrico-header__banner {
+  transition: opacity 0.5s ease-in;
+  .chrico-navigation--is-visible & {
+	opacity: 0.3;
+  }
+}
+
+.chrico-header__link {
+  display: block;
+  margin-top: $base_padding*2;
+
+  @include hover-state {
+	border-bottom: 0;
+  }
+}
+
+.chrico-header__img,
+.chrico-header__title {
+  display: block;
+  margin: $margin-center;
+  text-align: center;
+}
+
+.chrico-header__title {
+  margin-top: $base_padding;
+  font-size: 20px;
+}

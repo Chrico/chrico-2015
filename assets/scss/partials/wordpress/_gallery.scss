@@ -1,0 +1,13 @@
+//****************************************************************************
+
+// ______________ Gallery
+
+.chrico-gallery {
+  @extend %clearfix;
+}
+
+.chrico-gallery__caption {
+  color: $color-04;
+  font-style: italic;
+  font-size: 80%;
+}

@@ -1,0 +1,127 @@
+//****************************************************************************
+// ______________ Search
+
+.chrico-search {
+  padding-top: $base_padding;
+  margin-bottom: $base_padding;
+  margin-right: $base_padding*2;
+  @extend %clearfix;
+}
+
+// <form>
+.chrico-search__form {
+  float: right;
+}
+
+// element arrount label and input
+.chrico-search__field {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 85%;
+  vertical-align: top;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+// the input type="text" name="s"
+.chrico-search__input {
+  padding: 0;
+  margin-top: 0;
+  width: 100%;
+  background: transparent;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  color: #aaa;
+  font-weight: 400;
+  -webkit-appearance: none; // for box shadows to show on iOS
+
+  &:focus {
+	outline: none;
+  }
+
+}
+
+// the label
+.chrico-search__label {
+  display: inline-block;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  text-transform: uppercase;
+  color: $color-06;
+  pointer-events: none;
+  transform-origin: 0 0;
+  transition: transform 0.2s 0.1s, color 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.chrico-search__label-text {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+// the svg line for animation
+.chrico-search__svg {
+  position: absolute;
+  left: 0;
+  fill: none;
+  stroke: $color-06;
+  pointer-events: none;
+  stroke-width: 2px;
+  bottom: 16px;
+  height: 3.275em;
+  transition: transform 0.7s, stroke 0.7s;
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+// states for focus
+.chrico-search__input:focus + .chrico-search__label,
+.chrico-search__label--has-value .chrico-search__label {
+  color: $color-05;
+  transform: translate3d(0, 2.5em, 0) scale3d(0.85, 0.85, 1);
+}
+
+.chrico-search__input:focus ~ .chrico-search__svg,
+.chrico-search__label--has-value .chrico-search__svg {
+  stroke: $color-05;
+  transform: translate3d(-66.6%, 0, 0);
+}
+
+// the submit-button
+.chrico-search__submit {
+  display: inline-block;
+  background: none;
+  border: 0;
+  width: auto;
+  padding: 0;
+  color: $color-06;
+
+  @include hover-state {
+	color: $color-05;
+  }
+
+  .icon-search {
+	display: inline-block;
+	width: 22px;
+	height: 35px;
+	vertical-align: middle;
+	fill: currentcolor;
+  }
+}
