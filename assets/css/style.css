@@ -1321,3 +1321,7 @@ textarea {
             transform: scale(1);
   }
 }
+.chrico-breadcrumbs {
+  text-align: center;
+  margin-bottom: 0;
+}
