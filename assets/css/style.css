@@ -583,7 +583,12 @@ video {
 }
 
 .chrico-post__inner {
-  min-height: 400px;
+  min-height: 450px;
+}
+@media (max-width: 54.85714em) {
+  .chrico-post__inner {
+    min-height: 100%;
+  }
 }
 
 .chrico-post__meta {
