@@ -1,0 +1,71 @@
+//****************************************************************************
+
+// ______________ BREAKPOINTS (http://ahrengot.com/web-development/sass-breakpoint-mixin/)
+
+// Usage: values in px will be converted to em
+//
+// Default defined Points in _base.scss
+// 	@include breakpoint(tablet) {
+// 		width: 80%;
+// 	}
+//
+// Accepts values like min-width, if no defined value fits
+// 	@include breakpoint(min-width, 1192px) {
+// 		background: red;
+// 	}
+//
+// For Breakpoints between two values
+// 	@include between-breakpoints(0, 1024px) {
+// 		font-size: 1.3em;
+// 	}
+//
+
+@mixin breakpoint($point, $value: 0) {
+  @if $point == mobile {
+	@media (max-width: $bp-mobile / $base-font-size + 'em') {
+	  @content;
+	}
+  } @else if $point == mobile-horizontal {
+	@media (max-width: $bp-mobile-horizontal / $base-font-size + 'em') {
+	  @content;
+	}
+  } @else if $point == tablet {
+	@media (max-width: $bp-tablet / $base-font-size + 'em') {
+	  @content;
+	}
+  } @else if $point == tablet-horizontal {
+	@media (max-width: $bp-tablet-horizontal / $base-font-size + 'em') {
+	  @content;
+	}
+  } @else if $point == desktop {
+	@media (max-width: $bp-desktop / $base-font-size + 'em') {
+	  @content;
+	}
+  } @else if $point == desktop-wide {
+	@media (max-width: $bp-desktop-wide / $base-font-size + 'em') {
+	  @content;
+	}
+  } @else {
+	@media ($point: $value / $base-font-size + 'em') {
+	  @content;
+	}
+  }
+}
+
+@mixin between-breakpoints($min, $max) {
+  @media (min-width: $min / $base-font-size + 'em') and (max-width: $max / $base-font-size + 'em') {
+	@content;
+  }
+}
+
+@mixin max-breakpoint($max) {
+  @media (max-width: $max / $base-font-size + 'em') {
+	@content;
+  }
+}
+
+@mixin min-breakpoint($min) {
+  @media (min-width: $min / $base-font-size + 'em') {
+	@content;
+  }
+}

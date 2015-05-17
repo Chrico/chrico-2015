@@ -1,0 +1,148 @@
+.post {
+
+}
+
+.chrico-post__inner {
+  @extend %chrico-box;
+  min-height: 400px;
+}
+
+.chrico-post__meta {
+  text-align: center;
+  margin: ($base_padding/2) 0;
+}
+
+.chrico-post__link {
+  display: block;
+
+  @include hover-state {
+	border: 0;
+  }
+
+  img {
+	display: block;
+  }
+  /*
+ * TODO: helle Bilder und so mit weißen Text drauf..
+ *
+  // add blur effect for archive pages
+  .chrico-post--is-archive & {
+	overflow: hidden;
+	position: relative;
+
+	@include hover-state {
+	  img {
+		filter: blur(3px);
+	  }
+	  .chrico-post__link-read-more {
+		opacity: 1;
+	  }
+	}
+
+	img,
+	.chrico-post__link-read-more {
+	  transition: all 0.5s ease-in;
+	}
+  }
+  */
+}
+
+/*
+.chrico-post__link-read-more {
+  opacity: 0;
+  font-size: 20px;
+  width: 50%;
+  overflow: hidden;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height:40px;
+  line-height:36px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+*/
+
+// post_content
+.chrico-post__content {
+
+}
+
+// post_excerpt
+.chrico-post__excerpt {
+  // on singular pages, excerpt is bold.
+  .chrico-post--is-singular & {
+	font-weight: 600;
+  }
+}
+
+.chrico-post__author {
+  @extend %clearfix;
+
+  img {
+	float: left;
+	margin-right: $base_padding;
+	border-radius: 50%;
+  }
+}
+
+//****************************************************************************
+
+// ______________ Archive-Posts
+
+.chrico-post--is-archive {
+  width: 33%;
+  float: left;
+
+  &:nth-child(3n+1) {
+	clear: left;
+  }
+
+  @include breakpoint(tablet-horizontal) {
+	width: 50%;
+
+	&:nth-child(2n+1) {
+	  clear: left;
+	}
+
+	&:nth-child(3n+1) {
+	  clear: none;
+	}
+
+  }
+  @include breakpoint(tablet) {
+	width: 100%;
+	float: none;
+  }
+
+  .chrico-post__title {
+	font-size: 135%;
+  }
+}
+
+//****************************************************************************
+
+// ______________ Singular Posts
+
+.chrico-post--is-singular {
+  width: 70%;
+  float: left;
+  @include breakpoint(tablet-horizontal) {
+	width: 100%;
+	float: none;
+  }
+}
+
+//****************************************************************************
+
+// ______________ Post Thumbnail
+
+.chrico-post__thumbnail {
+  // negative margin to fit the image into complete box
+  // see paddings in placeholder %chrico-box
+  margin: (-$base_padding*0.5) (-$base_padding) 0;
+}

@@ -1,0 +1,56 @@
+.chrico-sidebar {
+  @extend %clearfix;
+}
+
+//****************************************************************************
+
+// ______________ Right Sidebar Area
+
+.chrico-sidebar__right {
+  width: 30%;
+  float: right;
+  align-content: flex-start;
+
+  @include breakpoint(tablet-horizontal) {
+	width: 100%;
+	float: none;
+  }
+
+}
+
+//****************************************************************************
+
+// ______________ Widgets
+
+.chrico-widget {
+  width: 100%;
+
+  @include breakpoint(tablet-horizontal) {
+	width: 50%;
+	float: left;
+  }
+
+  @include breakpoint(mobile-horizontal) {
+	width: 100%;
+	float: none;
+  }
+
+  ul,
+  li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+
+}
+
+.chrico-widget__inner {
+  @extend %chrico-box;
+}
+
+.chrico-widget__title {
+  font-size: 110%;
+  font-weight: bold;
+  color: $color-06;
+  margin-bottom: $base_padding;
+}

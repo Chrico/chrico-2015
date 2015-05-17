@@ -1,0 +1,122 @@
+//****************************************************************************
+// ______________ Box-Sizing
+
+*,
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+//****************************************************************************
+// ______________ Body
+
+body {
+  font: 14px/1.7 Imprima, Tahoma, Arial, sans-serif;
+  background: $color-01 url("../img/pattern.png");
+  color: $color-05;
+  position: relative;
+
+  @include breakpoint(tablet) {
+	overflow-x: hidden;
+	z-index: 9;
+	transition: all 0.5s ease-in;
+	transform: translate3d(0, 0, 0);
+
+	&.chrico-navigation--is-visible {
+	  transform: translate3d(250px, 0, 0); // moving the left container 250px to the left
+
+	}
+  }
+
+}
+
+//****************************************************************************
+// ______________ Links
+
+a {
+  color: $color-03;
+  text-decoration: none;
+  @include hover-state {
+	color: $color-04;
+	border-bottom: 1px dotted $color-04;
+  }
+}
+
+.icon {
+  fill: currentcolor;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+//****************************************************************************
+// ______________ Blockquote
+
+blockquote {
+  background: $color-07;
+  color: $color-05;
+}
+
+//****************************************************************************
+// ______________ Headlines
+
+h1,
+h2, h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+h1 {
+  font-size: 225%;
+  font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 175%;
+}
+
+h4 {
+  font-size: 150%
+}
+
+h5 {
+  font-size: 125%
+}
+
+h6 {
+  font-size: 115%;
+}
+
+//****************************************************************************
+// ______________ Site Container
+
+.chrico-site {
+  max-width: $max-width;
+  width: 100%;
+  margin: $margin-center;
+}
+
+//****************************************************************************
+// ______________ Main Container
+
+.chrico-main {
+  transition: opacity 0.5s ease-in;
+  @extend %clearfix;
+
+  .chrico-navigation--is-visible & {
+	opacity: 0.3;
+  }
+}

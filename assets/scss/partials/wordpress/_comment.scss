@@ -1,0 +1,118 @@
+//****************************************************************************
+
+// ______________ Comment
+
+.chrico-comments__list {
+  padding: 0;
+}
+
+.chrico-comments__title,
+.comment-reply-title {
+  font-size: 150%;
+}
+
+// the_comment();
+.chrico-comment {
+  margin: 0;
+  padding: 0.5em;
+  list-style: none;
+
+  /* avatar */
+  .avatar {
+	display: inline;
+	float: left;
+	margin-right: 1em;
+  }
+
+  .fn {
+	display: block;
+  }
+
+  .children {
+	margin-left: $base_padding*2;
+	padding: 0;
+
+	.chrico-comment {
+	  padding-left: 1em;
+	}
+
+  }
+}
+
+/* meta */
+.chrico-comment__meta {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+
+  img {
+	border-radius: 50%;
+  }
+}
+
+/* content */
+.chrico-comment__content {
+  position: relative;
+  @extend %clearfix;
+}
+
+.comment-reply-link {
+  display: block;
+  float: right;
+}
+
+//****************************************************************************
+
+// ______________ Comment Form
+
+#respond {
+  margin-top: 2em;
+
+  form {
+	margin: 1.7em 0;
+  }
+
+  label {
+	display: block;
+	line-height: 1.7;
+  }
+
+  .form-submit {
+	margin-top: 1em;
+  }
+
+}
+
+.comment-form-author {
+
+}
+
+.comment-form-email {
+
+}
+
+.comment-form-url {
+
+}
+
+#cancel-comment-reply-link {
+  margin-left: 0;
+  font-weight: normal;
+  font-size: 75%;
+  display: block;
+}
+
+.required {
+  color: red;
+}
+
+.logged-in-as,
+.comment-notes {
+  margin-bottom: 1em;
+}
+
+.form-allowed-tags {
+  margin: 0;
+  line-height: 2;
+  color: #5e5e5e;
+}

@@ -1,0 +1,32 @@
+/*  Globals _____________________________________________ */
+
+// set the base font size of the site
+$base-font-size: 14px;
+
+// max width
+$max-width: 1200px;
+
+// Breakpoints for breakpoint()-Mixin.
+$bp-mobile: 320px;
+$bp-mobile-horizontal: 480px;
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: $max-width;
+$bp-desktop-wide: 1500px;
+
+/* Colors _____________________________________________*/
+
+$color-00: #fff;	// just white.
+$color-01: #dadada; // default bg
+$color-02: #000000;	// default color
+$color-03: #2e969d;	// nav, link color
+$color-04: #1f666b;	// nav, link color hover-state
+$color-05: #303030;	// default text color
+$color-06: #737373;	// currently only search color
+$color-07: #d5eaeb;	// currently on for blockquote backgrounds
+
+/* Align tweaks  ______________________________________*/
+
+$base_padding: 16px;
+
+$margin-center: 0 auto;

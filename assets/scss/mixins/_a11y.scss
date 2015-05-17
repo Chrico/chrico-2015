@@ -1,0 +1,38 @@
+//****************************************************************************
+// ______________ HIDE ELEMENTS
+
+// Usage: give html element the class
+//
+//	.visually-hidden {
+//	  @extend %visuallyhidden;
+//	}
+//
+
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.screen-reader-text {
+  @extend %visuallyhidden;
+}
+
+//****************************************************************************
+//
+// Pseudo-class mixin for hover, active and focus state.
+//
+// @see https://gist.github.com/taupecat/4739443
+//
+@mixin hover-state {
+  &:hover,
+  &:active,
+  &:focus {
+	@content;
+  }
+}
