@@ -294,14 +294,14 @@ td {
   position: absolute;
 }
 
-.chrico-main, .chrico-comment__content, .chrico-post__author, .chrico-gallery, .chrico-sidebar, .chrico-navigation ul, .chrico-search {
+.chrico-main, .chrico-comment__content, .chrico-post__author, .chrico-gallery, .chrico-sidebar, .chrico-navigation ul, .chrico-header, .chrico-search {
   *zoom: 1;
 }
-.chrico-main:before, .chrico-comment__content:before, .chrico-post__author:before, .chrico-gallery:before, .chrico-sidebar:before, .chrico-navigation ul:before, .chrico-search:before, .chrico-main:after, .chrico-comment__content:after, .chrico-post__author:after, .chrico-gallery:after, .chrico-sidebar:after, .chrico-navigation ul:after, .chrico-search:after {
+.chrico-main:before, .chrico-comment__content:before, .chrico-post__author:before, .chrico-gallery:before, .chrico-sidebar:before, .chrico-navigation ul:before, .chrico-header:before, .chrico-search:before, .chrico-main:after, .chrico-comment__content:after, .chrico-post__author:after, .chrico-gallery:after, .chrico-sidebar:after, .chrico-navigation ul:after, .chrico-header:after, .chrico-search:after {
   content: " ";
   display: table;
 }
-.chrico-main:after, .chrico-comment__content:after, .chrico-post__author:after, .chrico-gallery:after, .chrico-sidebar:after, .chrico-navigation ul:after, .chrico-search:after {
+.chrico-main:after, .chrico-comment__content:after, .chrico-post__author:after, .chrico-gallery:after, .chrico-sidebar:after, .chrico-navigation ul:after, .chrico-header:after, .chrico-search:after {
   clear: both;
 }
 
@@ -338,6 +338,15 @@ body {
   body.chrico-navigation--is-visible {
     -webkit-transform: translate3d(250px, 0, 0);
             transform: translate3d(250px, 0, 0);
+  }
+}
+
+.admin-bar {
+  padding-top: 32px;
+}
+@media (max-width: 54.85714em) {
+  .admin-bar {
+    padding-top: 46px;
   }
 }
 
@@ -736,9 +745,9 @@ textarea {
 .chrico-navigation__toggle {
   display: none;
   height: 25px;
-  position: absolute;
-  top: 20px;
-  left: 16px;
+  margin-top: 20px;
+  margin-left: 16px;
+  float: left;
 }
 .chrico-navigation__toggle:hover, .chrico-navigation__toggle:active, .chrico-navigation__toggle:focus {
   border: 0;
@@ -791,6 +800,7 @@ textarea {
   margin: 0;
   padding: 0;
   list-style: none;
+  clear: both;
 }
 @media (max-width: 54.85714em) {
   .chrico-navigation ul {
@@ -930,6 +940,7 @@ textarea {
 }
 
 .chrico-header__banner {
+  clear: both;
   -webkit-transition: opacity 0.5s ease-in;
           transition: opacity 0.5s ease-in;
 }
@@ -958,6 +969,7 @@ textarea {
 }
 
 .chrico-search {
+  float: right;
   padding-top: 16px;
   margin-bottom: 16px;
   margin-right: 32px;

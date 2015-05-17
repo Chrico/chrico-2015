@@ -26,8 +26,8 @@ function chrico_setup() {
 	$vendor_dir = __DIR__ . '/vendors/';
 
 	load_theme_textdomain(
-		'chrico',
-		get_template_directory() . '/assets/languages'
+		'theme_chrico',
+		get_template_directory() . '/assets/language'
 	);
 
 	// the theme support
@@ -103,9 +103,12 @@ function chrico_setup() {
 		remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
 		remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-		// Remove Emoji
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		// remove admin bar styles
+		// using closure..because we just remove the shitty inline-css and i know, that we're using PHP >= 5.6.x
+		add_action( 'get_header', function() {
+			remove_action( 'wp_head', '_admin_bar_bump_cb' );
+		} );
+
 	}
 
 

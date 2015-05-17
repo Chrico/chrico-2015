@@ -2,10 +2,11 @@
 // ______________ Header
 
 .chrico-header {
-
+	@extend %clearfix;
 }
 
 .chrico-header__banner {
+  clear: both;
   transition: opacity 0.5s ease-in;
   .chrico-navigation--is-visible & {
 	opacity: 0.3;

@@ -40,15 +40,15 @@ function chrico_the_comment( $comment, Array $args, $depth ) {
 					get_comment_time() )
 			);
 			edit_comment_link(
-				__( '[Edit]', 'theme_chrico' ),
-				' <span class="comment-edit-link">',
+				_x( '[Bearbeiten]', 'Comment edit link text', 'theme_chrico' ),
+				' <span class="chrico-comment__edit-link">',
 				'</span>'
 			);
 			?>
 		</header>
 
 		<?php if ( '0' == $comment->comment_approved ) : ?>
-			<p class="chrico-comment__awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'theme_chrico' ); ?></p>
+			<p class="chrico-comment__notice--awaiting-moderation"><?php _e( 'Dein Kommentar muss von einem Administrator freigeschalten werden bevor du ihn siehst.', 'theme_chrico' ); ?></p>
 		<?php endif; ?>
 
 		<section class="chrico-comment__content">

@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Twenty Twelve\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Sun May 17 2015 17:05:43 GMT+0200 (Mitteleuropäische "
+"Sommerzeit)\n"
+"PO-Revision-Date: Sun May 17 2015 17:06:10 GMT+0200 (Mitteleuropäische "
+"Sommerzeit)\n"
+"Last-Translator: admin <family.brueckner@googlemail.com>\n"
+"Language-Team: \n"
+"Language: German\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../themes/chrico-2015\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: de_DE"
+
+#: ../../themes/chrico-2015/comments.php:17
+msgid "Das denkt Ihr über diesen Beitrag:"
+msgstr ""
+
+#: ../../themes/chrico-2015/searchform.php:31
+msgctxt "Search field label (empty)"
+msgid "Blog durchsuchen"
+msgstr ""
+
+#: ../../themes/chrico-2015/searchform.php:37
+msgctxt "Search field label (filled out)"
+msgid "Gefunden :)"
+msgstr ""
+
+#: ../../themes/chrico-2015/searchform.php:55
+msgctxt "Search form submit button"
+msgid "jetzt finden!"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/comment-form.php:12
+msgid "Lass uns Deine Meinung wissen!"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/comment-pingbacks.php:12
+#, php-format
+msgctxt "Pingbacks title"
+msgid "Ein Pingback"
+msgid_plural "%d Pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../themes/chrico-2015/parts/navigation-footer.php:11
+msgid "&copy; ChriCo - seit 2008"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/navigation-header.php:10
+msgid "Menü"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/pagination-comment.php:16
+msgid "&larr; Ältere Kommentare"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/pagination-comment.php:20
+msgid "Neuere Kommentare &rarr;"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/post-author.php:20
+msgctxt "Autor info box heading prefix"
+msgid "Über den Autor"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/post-meta.php:14
+msgid ", "
+msgstr ", "
+
+#: ../../themes/chrico-2015/parts/post-meta.php:25
+msgid "Das denkt Ihr über diesen Beitrag"
+msgstr ""
+
+#: ../../themes/chrico-2015/parts/post-meta.php:29
+msgid "Meinung"
+msgid_plural "Meinungen"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Translators: 1 is category, 2 is the date and 3 is the author's name, 4 is the comment link
+#: ../../themes/chrico-2015/parts/post-meta.php:34
+#, php-format
+msgctxt "post meta strings for categories_list, post_date, comments_text"
+msgid "%1$s | %2$s | %3$s"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/navigation.php:19
+msgctxt "Navigation title"
+msgid "Navigation im Header"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/navigation.php:20
+msgid "Navigation im Footer"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/widget.php:22
+msgid "Post-Widget-Bereich"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/widget.php:24
+msgid "Sidebar für is_single (Beiträge)"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/widget.php:31
+msgid "Page-Widget-Bereich"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/widget.php:33
+msgid "Sidebar für is_page (Seiten)"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/frontend/comment.php:34
+#, php-format
+msgctxt "1: date, 2: time for comment meta"
+msgid "%1$s @ %2$s"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/frontend/comment.php:43
+msgid "[Edit]"
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/frontend/comment.php:51
+msgid ""
+"Dein Kommentar muss von einem Administrator freigeschalten werden bevor du "
+"ihn siehst."
+msgstr ""
+
+#: ../../themes/chrico-2015/vendors/chrico/frontend/comment.php:64
+msgid "Auf diesen Kommentar antworten &raquo;"
+msgstr ""
