@@ -16,8 +16,8 @@ function chrico_register_nav_menus() {
 
 	register_nav_menus(
 		array(
-		     'chrico_main'      => __( 'Main Site Menu', 'theme_chrico' ),
-		     'chrico_footer'    => __( 'Footer Site Menu', 'theme_chrico' ),
+		     'chrico_main'      => _x( 'Navigation im Header', 'Navigation title', 'theme_chrico' ),
+		     'chrico_footer'    => __( 'Navigation im Footer', 'Navigation title', 'theme_chrico' ),
 		)
 	);
 

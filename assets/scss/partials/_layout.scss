@@ -29,6 +29,14 @@ body {
 
 }
 
+// some basic styling for the admin bar to support the theme properly
+.admin-bar {
+  padding-top: 32px;
+  @include breakpoint(tablet) {
+	padding-top: 46px;
+  }
+}
+
 //****************************************************************************
 // ______________ Links
 

@@ -15,9 +15,9 @@
 .chrico-navigation__toggle {
   display: none;
   height: 25px; // 5px first bar, 5px space, 5px middle bar, 5px space, 5px last bar
-  position: absolute;
-  top: 20px;
-  left: $base_padding;
+  margin-top: 20px;
+  margin-left: $base_padding;
+  float:left;
 
   @include hover-state {
 	border: 0;
@@ -81,6 +81,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	clear: both;
 	@extend %clearfix;
 
 	@include breakpoint(tablet) {

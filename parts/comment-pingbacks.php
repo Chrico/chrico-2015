@@ -10,8 +10,8 @@ if ( $num = chrico_get_count_pings() ) :
 	<h3 class="chrico-pingbacks__title"><?php
 		printf(
 			_nx(
-				'Ein pingback',
-				'%d pingbacks',
+				'Ein Pingback',
+				'%d Pingbacks',
 				$num,
 				'Pingbacks title',
 				'theme_chrico'
