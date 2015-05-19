@@ -159,6 +159,14 @@ module.exports = function (grunt) {
 					overwrite: true
 				}
 			}
+		},
+		combine_mq  : {
+			default_options: {
+				expand: true,
+				cwd   : THEME_DIR,
+				src   : 'assets/css/*.css',
+				dest  : './'
+			}
 		}
 
 	});
@@ -167,7 +175,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('javascript-testing', ['jshint']);
 	grunt.registerTask('javascript', ['concat:jquery', 'concat:polyfill', 'concat:theme', 'uglify:theme']);
-	grunt.registerTask('css', ['sass:theme', 'autoprefixer:theme', 'lineending:theme', 'cssmin:theme']);
+	grunt.registerTask('css', ['sass:theme', 'autoprefixer:theme', 'lineending:theme', 'combine_mq', 'cssmin:theme']);
 	grunt.registerTask('image', ['imagemin', 'svgmin']);
 
 	// Default task
