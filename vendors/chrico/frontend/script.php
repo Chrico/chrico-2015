@@ -6,6 +6,30 @@
  * Author URI:        http://www.chrico.info
  */
 
+/**
+ *
+ *
+ * @wp-hook script_loader_tag
+ *
+ * @param   string $html
+ * @param   string $handle
+ *
+ * @return string $html
+ */
+function chrico_filter_script_loader_tag_inline_theme_js( $html, $handle ) {
+	global $wp_scripts;
+
+	if ( in_array( $handle, array( 'chrico-polyfills', 'chrico-theme' ) ) ) {
+		$script = $wp_scripts->registered[ $handle ];
+		$script = file_get_contents( $script->src );
+		if ( ! ! $script ) {
+			$html = '<script id="' . $handle . '-js">' . $script . '</script>';
+		}
+	}
+
+	return $html;
+}
+
 
 /**
  * getting the script version for debug- or live-mode
