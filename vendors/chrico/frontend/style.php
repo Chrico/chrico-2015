@@ -8,32 +8,6 @@
 
 
 /**
- * Remove file version query arguments from script/stylesheet URLs.
- *
- * Leaves http://fonts.googleapis.com/css?family=MyFont untouched.
- *
- * @link    http://wordpress.stackexchange.com/a/96325/
- * @link    http://wordpress.stackexchange.com/q/99842/
- *
- * @wp-hook style_loader_src
- *
- * @param   string $url
- * @param   string $handle
- *
- * @return  string
- */
-function chrico_filter_style_loader_src( $url, $handle ) {
-	$host = parse_url( $url, PHP_URL_HOST );
-
-	if ( $host === 'fonts.googleapis.com' ) {
-		return remove_query_arg( 'ver', $url );
-	}
-
-	return $url;
-}
-
-
-/**
  * Enqueue styles.
  *
  * @wp-hook wp_enqueue_scripts
@@ -75,15 +49,6 @@ function chrico_get_styles() {
 	$styles[ 'chrico' ] = array(
 		'src'     => get_template_directory_uri() . '/assets/css/style' . $suffix . '.css',
 		'deps'    => null,
-		'version' => chrico_get_script_version(),
-		'media'   => null
-	);
-
-	// adding our webfonts
-	$query_args                = array( 'family' => 'Imprima:400,700' );
-	$styles[ 'chrico-webfonts' ] = array(
-		'src'     => add_query_arg( $query_args, "//fonts.googleapis.com/css" ),
-		'deps'    => array(),
 		'version' => chrico_get_script_version(),
 		'media'   => null
 	);
