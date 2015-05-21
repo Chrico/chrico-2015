@@ -6,6 +6,7 @@
 * Improved CSS-output by combining media-queries with [grunt-combine-mq](https://github.com/buildingblocks/grunt-combine-media-queries).
 * Removed loading of additional Google Fonts file.
 * Added Filter to load `chrico-theme`- and `chrico-polyfill`-JavaScript inline for better performance.
+* Moved `post-author.php`- and comments- out of `post-content`-Template.
 
 ### 1.0.1
 * Removed unused "js"-/"no-js"-script.
