@@ -12,6 +12,8 @@
 		get_template_part( 'parts/post', 'excerpt' );
 		if ( is_singular() ) :
 			get_template_part( 'parts/post', 'content' );
+			get_template_part( 'parts/post', 'author' );
+			comments_template( '', true );
 		endif;
 		?>
 	</div>

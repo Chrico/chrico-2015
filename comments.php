@@ -9,7 +9,7 @@ if ( post_password_required() ) :
 	return;
 endif;
 ?>
-<div id="comments" class="chrico-comments">
+<section id="comments" class="chrico-comments">
 
 	<?php if ( have_comments() ) : ?>
 
@@ -27,4 +27,4 @@ endif;
 
 	<?php get_template_part( 'parts/comment', 'form' ); ?>
 
-</div>
+</section>
