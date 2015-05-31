@@ -61,8 +61,9 @@ module.exports = function (grunt) {
 				cwd   : THEME_DIR,
 				dest  : THEME_DIR,
 				src   : [
-					'assets/css/editor-style.css',
-					'assets/css/style.css'
+					'assets/css/*.css',
+					// Exceptions
+					'!assets/css/*.min.css'
 				]
 			}
 		},
@@ -76,8 +77,9 @@ module.exports = function (grunt) {
 				dest   : THEME_DIR,
 				ext    : '.min.css',
 				src    : [
-					'assets/css/editor-style.css',
-					'assets/css/style.css'
+					'assets/css/*.css',
+					// Exceptions
+					'!assets/css/*.min.css'
 				]
 			}
 		},
@@ -124,7 +126,6 @@ module.exports = function (grunt) {
 					noCache    : true
 				},
 				src    : [
-					'editor-style.scss',
 					'style.scss'
 				]
 			}
@@ -164,7 +165,11 @@ module.exports = function (grunt) {
 			default_options: {
 				expand: true,
 				cwd   : THEME_DIR,
-				src   : 'assets/css/*.css',
+				src   : [
+					'assets/css/*.css',
+					// Exceptions
+					'!assets/css/*.min.css'
+				],
 				dest  : './'
 			}
 		}
