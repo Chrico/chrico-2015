@@ -54,3 +54,16 @@
   color: $color-06;
   margin-bottom: $base_padding;
 }
+
+
+//****************************************************************************
+
+// ______________ ChriCo Author Widget
+
+.chrico-author-widget__avatar {
+  text-align:center;
+
+  img {
+	border-radius: 50%;
+  }
+}

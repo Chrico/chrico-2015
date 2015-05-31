@@ -254,16 +254,16 @@ td {
   position: absolute;
 }
 
-.chrico-main,.chrico-comment__content,.chrico-post__author,.chrico-gallery,.chrico-sidebar,.chrico-navigation ul,.chrico-header,.chrico-search {
+.chrico-main,.chrico-comment__content,.chrico-gallery,.chrico-sidebar,.chrico-navigation ul,.chrico-header,.chrico-search {
   *zoom: 1;
 }
 
-.chrico-main:before,.chrico-comment__content:before,.chrico-post__author:before,.chrico-gallery:before,.chrico-sidebar:before,.chrico-navigation ul:before,.chrico-header:before,.chrico-search:before,.chrico-main:after,.chrico-comment__content:after,.chrico-post__author:after,.chrico-gallery:after,.chrico-sidebar:after,.chrico-navigation ul:after,.chrico-header:after,.chrico-search:after {
+.chrico-main:before,.chrico-comment__content:before,.chrico-gallery:before,.chrico-sidebar:before,.chrico-navigation ul:before,.chrico-header:before,.chrico-search:before,.chrico-main:after,.chrico-comment__content:after,.chrico-gallery:after,.chrico-sidebar:after,.chrico-navigation ul:after,.chrico-header:after,.chrico-search:after {
   content: " ";
   display: table;
 }
 
-.chrico-main:after,.chrico-comment__content:after,.chrico-post__author:after,.chrico-gallery:after,.chrico-sidebar:after,.chrico-navigation ul:after,.chrico-header:after,.chrico-search:after {
+.chrico-main:after,.chrico-comment__content:after,.chrico-gallery:after,.chrico-sidebar:after,.chrico-navigation ul:after,.chrico-header:after,.chrico-search:after {
   clear: both;
 }
 
@@ -518,13 +518,6 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
   font-weight: 600;
 }
 
-.chrico-post__author img {
-  float: left;
-  margin-right: 16px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
 .chrico-post--is-archive {
   width: 33%;
   float: left;
@@ -602,6 +595,15 @@ input,button,textarea {
   font-weight: bold;
   color: #737373;
   margin-bottom: 16px;
+}
+
+.chrico-author-widget__avatar {
+  text-align: center;
+}
+
+.chrico-author-widget__avatar img {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .chrico-navigation__toggle {
