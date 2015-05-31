@@ -1,6 +1,9 @@
 //****************************************************************************
 
 // ______________ Comment
+.chrico-comments {
+	margin-top: $base_padding*3;
+}
 
 .chrico-comments__list {
   padding: 0;
@@ -14,14 +17,14 @@
 // the_comment();
 .chrico-comment {
   margin: 0;
-  padding: 0.5em;
+  padding: $base_padding*0.5;
   list-style: none;
 
   /* avatar */
   .avatar {
 	display: inline;
 	float: left;
-	margin-right: 1em;
+	margin-right: $base_padding;
   }
 
   .fn {
@@ -33,7 +36,7 @@
 	padding: 0;
 
 	.chrico-comment {
-	  padding-left: 1em;
+	  padding-left: $base_padding;
 	}
 
   }
@@ -66,10 +69,10 @@
 // ______________ Comment Form
 
 #respond {
-  margin-top: 2em;
+  margin-top: $base_padding*2;
 
   form {
-	margin: 1.7em 0;
+	margin: $base_padding*2 0;
   }
 
   label {
@@ -78,7 +81,7 @@
   }
 
   .form-submit {
-	margin-top: 1em;
+	margin-top: $base_padding;
   }
 
 }
@@ -108,7 +111,7 @@
 
 .logged-in-as,
 .comment-notes {
-  margin-bottom: 1em;
+  margin-bottom: $base_padding;
 }
 
 .form-allowed-tags {
