@@ -597,6 +597,7 @@ input,button,textarea {
   font-weight: bold;
   color: #737373;
   margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .chrico-author-widget__avatar {
