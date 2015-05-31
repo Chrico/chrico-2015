@@ -282,7 +282,7 @@ td {
 }
 
 body {
-  font: 14px/1.7 Imprima, Tahoma, Arial, sans-serif;
+  font: 15px/1.7 Imprima, Tahoma, Arial, sans-serif;
   background: #dadada url("../img/pattern.png");
   color: #303030;
   position: relative;
@@ -602,6 +602,9 @@ input,button,textarea {
 }
 
 .chrico-author-widget__avatar img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
@@ -1155,11 +1158,17 @@ input,button,textarea {
 }
 
 @media (max-width: 48em) {
+  .chrico-post__inner,.chrico-widget__inner {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
   html {
     overflow-x: hidden;
   }
 
   body {
+    font-size: 16px;
     z-index: 9;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;

@@ -6,6 +6,8 @@
 * Added Post Author Widget.
 * Added styles for Post Author Widget.
 * Removed Post Author Template from Theme.
+* Added smaller margin on Tablet view to chrico-box.
+* Added new font-size for Desktop and Mobile.
 
 ### 1.1
 * Improved CSS-output by combining media-queries with [grunt-combine-mq](https://github.com/buildingblocks/grunt-combine-media-queries).
