@@ -8,6 +8,8 @@
 * Removed Post Author Template from Theme.
 * Added smaller margin on Tablet view to chrico-box.
 * Added new font-size for Desktop and Mobile.
+* Added missing padding to Breadcrumbs.
+* Added correct maringRight for Search on mobile search.
 
 ### 1.1
 * Improved CSS-output by combining media-queries with [grunt-combine-mq](https://github.com/buildingblocks/grunt-combine-media-queries).

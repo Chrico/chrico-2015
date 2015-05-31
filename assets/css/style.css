@@ -322,6 +322,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-size: 225%;
   font-weight: 400;
+  word-break: break-all;
 }
 
 h2,h3,h4,h5 {
@@ -1114,6 +1115,8 @@ input,button,textarea {
   margin-bottom: 0;
   -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .chrico-navigation--is-visible .chrico-breadcrumbs {
@@ -1154,6 +1157,10 @@ input,button,textarea {
   .chrico-widget {
     width: 50%;
     float: left;
+  }
+
+  .chrico-search {
+    margin-right: 16px;
   }
 }
 

@@ -5,6 +5,8 @@
   text-align:center;
   margin-bottom:0;
   transition: opacity 0.5s ease-in;
+  padding-left: $base_padding;
+  padding-right: $base_padding;
 
   .chrico-navigation--is-visible & {
 	opacity: 0.3;

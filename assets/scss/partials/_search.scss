@@ -2,11 +2,16 @@
 // ______________ Search
 
 .chrico-search {
+  @extend %clearfix;
   float: right;
   padding-top: $base_padding;
   margin-bottom: $base_padding;
   margin-right: $base_padding*2;
-  @extend %clearfix;
+
+  @include breakpoint(tablet-horizontal) {
+	margin-right: $base_padding;
+  }
+
 }
 
 // <form>
