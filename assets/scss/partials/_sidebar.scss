@@ -64,6 +64,9 @@
   text-align:center;
 
   img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
 	border-radius: 50%;
   }
 }

@@ -20,12 +20,13 @@ html {
 // ______________ Body
 
 body {
-  font: 14px/1.7 Imprima, Tahoma, Arial, sans-serif;
+  font: 15px/1.7 Imprima, Tahoma, Arial, sans-serif;
   background: $color-01 url("../img/pattern.png");
   color: $color-05;
   position: relative;
 
   @include breakpoint(tablet) {
+	font-size:16px;
 	z-index: 9;
 	transition: all 0.5s ease-in;
 	transform: translate3d(0, 0, 0);
