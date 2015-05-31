@@ -87,16 +87,6 @@
   }
 }
 
-.chrico-post__author {
-  @extend %clearfix;
-
-  img {
-	float: left;
-	margin-right: $base_padding;
-	border-radius: 50%;
-  }
-}
-
 //****************************************************************************
 // ______________ Archive-Posts
 

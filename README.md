@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 1.2
+* Added Post Author Widget.
+* Added styles for Post Author Widget.
+* Removed Post Author Template from Theme.
+
 ### 1.1
 * Improved CSS-output by combining media-queries with [grunt-combine-mq](https://github.com/buildingblocks/grunt-combine-media-queries).
 * Removed loading of additional Google Fonts file.
