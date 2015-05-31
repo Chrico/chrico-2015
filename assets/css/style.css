@@ -406,6 +406,10 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
   text-align: center;
 }
 
+.chrico-comments {
+  margin-top: 48px;
+}
+
 .chrico-comments__list {
   padding: 0;
 }
@@ -416,7 +420,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 
 .chrico-comment {
   margin: 0;
-  padding: 0.5em;
+  padding: 8px;
   list-style: none;
  /* avatar */;
 }
@@ -424,7 +428,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 .chrico-comment .avatar {
   display: inline;
   float: left;
-  margin-right: 1em;
+  margin-right: 16px;
 }
 
 .chrico-comment .fn {
@@ -437,7 +441,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 }
 
 .chrico-comment .children .chrico-comment {
-  padding-left: 1em;
+  padding-left: 16px;
 }/* meta */.chrico-comment__meta {
   margin: 0;
   overflow: hidden;
@@ -457,11 +461,11 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 }
 
 #respond {
-  margin-top: 2em;
+  margin-top: 32px;
 }
 
 #respond form {
-  margin: 1.7em 0;
+  margin: 32px 0;
 }
 
 #respond label {
@@ -470,7 +474,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 }
 
 #respond .form-submit {
-  margin-top: 1em;
+  margin-top: 16px;
 }
 
 #cancel-comment-reply-link {
@@ -485,7 +489,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 }
 
 .logged-in-as,.comment-notes {
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 
 .form-allowed-tags {
