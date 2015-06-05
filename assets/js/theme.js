@@ -16,36 +16,53 @@
 (function (doc) {
 	"use strict"; // jshint ~_~
 
-	var $toggle = document.getElementById('chrico-navigation__toggle'),
-		$menuItem = document.getElementsByClassName('menu-item-has-children');
+	var Navigation = {},
+		classes = {
+			menuItem : 'menu-item-has-children',
+			isVisible: 'chrico-navigation--is-visible',
+			isActive : 'chrico-navigation__toggle--is-active'
+		},
+		$toggle = doc.getElementById('chrico-navigation__toggle'),
+		$menuItem = doc.getElementsByClassName(classes.menuItem),
+		$body = doc.body;
 
-	bind(
-		$toggle,
-		'click',
-		function (e) {
-			e.preventDefault();
-			$toggle.classList.toggle('chrico-navigation__toggle--is-active');
-			doc.body.classList.toggle('chrico-navigation--is-visible');
-		}
-	);
+	// initialize all events.
+	Navigation.initialize = function () {
+		Navigation.registerToggleEvent();
+		Navigation.registerHoverEvent();
+	};
 
-	[].forEach.call($menuItem, function ($element) {
+	// register the event on toggle-Button for mobile/tablet view to show/hide the Navigation.
+	Navigation.registerToggleEvent = function () {
 		bind(
-			$element,
-			'mouseenter',
-			function () {
-				this.classList.add('chrico-sub-navigation--is-visible');
+			$toggle,
+			'click',
+			function (e) {
+				e.preventDefault();
+				$toggle.classList.toggle(classes.isActive);
+				$body.classList.toggle(classes.isVisible);
 			}
 		);
-		bind(
-			$element,
-			'mouseleave',
-			function () {
-				this.classList.remove('chrico-sub-navigation--is-visible');
-			}
-		)
+	};
 
-
-	});
+	// register the mouseEnter/-Leave-Event for show/hide the Sub-Navigation.
+	Navigation.registerHoverEvent = function () {
+		[].forEach.call($menuItem, function ($element) {
+			bind(
+				$element,
+				'mouseenter',
+				function () {
+					this.classList.add(classes.isVisible);
+				}
+			);
+			bind(
+				$element,
+				'mouseleave',
+				function () {
+					this.classList.remove(classes.isVisible);
+				}
+			)
+		});
+	};
 
 })(document);

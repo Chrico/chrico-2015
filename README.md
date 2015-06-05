@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.3
+* Improved navigation.js, added some documentation to methods.
+
 ### 1.2
 * Added Post Author Widget.
 * Added styles for Post Author Widget.
