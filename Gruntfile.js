@@ -133,6 +133,7 @@ module.exports = function (grunt) {
 		uglify      : {
 			theme: {
 				expand: true,
+				screwIE8: true,
 				cwd   : THEME_DIR,
 				dest  : THEME_DIR,
 				rename: function (destBase, destPath) {
