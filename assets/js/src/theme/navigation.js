@@ -6,9 +6,10 @@
 
 	var Navigation = {},
 		classes = {
-			menuItem : 'menu-item-has-children',
-			isVisible: 'chrico-navigation--is-visible',
-			isActive : 'chrico-navigation__toggle--is-active'
+			menuItem              : 'menu-item-has-children',
+			subNavigationIsVisible: 'chrico-sub-navigation--is-visible',
+			navigationIsVisible   : 'chrico-navigation--is-visible',
+			toggleIsActive        : 'chrico-navigation__toggle--is-active'
 		},
 		$toggle = doc.getElementById('chrico-navigation__toggle'),
 		$menuItem = doc.getElementsByClassName(classes.menuItem),
@@ -27,8 +28,8 @@
 			'click',
 			function (e) {
 				e.preventDefault();
-				$toggle.classList.toggle(classes.isActive);
-				$body.classList.toggle(classes.isVisible);
+				$toggle.classList.toggle(classes.toggleIsActive);
+				$body.classList.toggle(classes.navigationIsVisible);
 			}
 		);
 	};
@@ -40,17 +41,19 @@
 				$element,
 				'mouseenter',
 				function () {
-					this.classList.add(classes.isVisible);
+					this.classList.add(classes.subNavigationIsVisible);
 				}
 			);
 			bind(
 				$element,
 				'mouseleave',
 				function () {
-					this.classList.remove(classes.isVisible);
+					this.classList.remove(classes.subNavigationIsVisible);
 				}
 			)
 		});
 	};
+
+	Navigation.initialize();
 
 })(document);
