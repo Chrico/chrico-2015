@@ -7,6 +7,7 @@
 * Added missing `wp_link_pages`-function.
 * Added `editor-style.css`.
 * Improved size of search icon for mobile devices.
+* Fixed scaling bug for mobile devices when off-canvas navigation opens.
 
 ### 1.3
 * Improved navigation.js, added some documentation to methods.

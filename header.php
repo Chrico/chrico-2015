@@ -11,7 +11,7 @@
 <head>
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="google-site-verification" content="AabDB0RNGP6wtWRVaPWeaabjtZBTmeF2SYgbr-4PmyU" />
 
