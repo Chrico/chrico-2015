@@ -15,7 +15,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="google-site-verification" content="AabDB0RNGP6wtWRVaPWeaabjtZBTmeF2SYgbr-4PmyU" />
 
-	<title><?php wp_title( '-', true, 'right' ); ?></title>
 	<?php if ( is_singular() && comments_open() ) :
 		wp_enqueue_script( 'comment-reply' );
 	endif; ?>

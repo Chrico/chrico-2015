@@ -6,6 +6,7 @@
 * Added theme-support for `title-tag`.
 * Added missing `wp_link_pages`-function.
 * Added `editor-style.css`.
+* Improved size of search icon for mobile devices.
 
 ### 1.3
 * Improved navigation.js, added some documentation to methods.
