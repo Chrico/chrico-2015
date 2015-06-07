@@ -4,6 +4,7 @@
 
 ### 1.3
 * Improved navigation.js, added some documentation to methods.
+* Removed recent comment styles.
 
 ### 1.2
 * Added Post Author Widget.
