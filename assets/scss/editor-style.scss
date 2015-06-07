@@ -13,9 +13,15 @@
 @import "partials/typography";
 @import "partials/wordpress";
 
-// in frontend, we're using a pattern and grey background
-// but our tinyMCE should have the box layout of the post__inner
-// with padding and white background.
-.mce-content-body {
+// in frontend, we're using a pattern and grey background on <body>
+// so we have to..
+//   * extend in tinyMCE the <body> on the <html>-Element.
+//   * the "%chrico-box"-Styles on the <body> with class (stronger selector than default styles).
+//   * add !important to padding to avoid overwriting. :-(
+html {
+  @extend body;
+}
+body.mce-content-body {
   @extend %chrico-box;
+  padding: $base_padding*0.5 $base_padding !important;
 }

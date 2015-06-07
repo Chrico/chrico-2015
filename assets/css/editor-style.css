@@ -4,7 +4,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+body,html {
   margin: 0;
 }
 
@@ -267,7 +267,7 @@ td {
   clear: both;
 }
 
-.chrico-post__inner,.mce-content-body {
+.chrico-post__inner,body.mce-content-body,html.mce-content-body {
   background: #fff;
   margin: 32px;
   padding: 8px 16px;
@@ -281,7 +281,7 @@ td {
   box-sizing: border-box;
 }
 
-body {
+body,html {
   font: 15px/1.7 Imprima, Tahoma, Arial, sans-serif;
   background: #dadada url("../img/pattern.png");
   color: #303030;
@@ -552,6 +552,10 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
   font-size: 80%;
 }
 
+body.mce-content-body,html.mce-content-body {
+  padding: 8px 16px !important;
+}
+
 @font-face {
   font-family:'Imprima';font-style:normal;font-weight:400;src:local("Imprima"), local("Imprima-Regular"), url(//fonts.gstatic.com/s/imprima/v4/jLmjYqvjKzl58B_XRoMSp_Y6323mHUZFJMgTvxaG2iE.woff2) format("woff2");unicode-range:U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
@@ -580,7 +584,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 }
 
 @media (max-width: 48em) {
-  .chrico-post__inner,.mce-content-body {
+  .chrico-post__inner,body.mce-content-body,html.mce-content-body {
     margin-left: 16px;
     margin-right: 16px;
   }
@@ -589,7 +593,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
     overflow-x: hidden;
   }
 
-  body {
+  body,html {
     font-size: 16px;
     z-index: 9;
     -webkit-transition: all 0.5s ease-in;
@@ -598,7 +602,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
     transform: translate3d(0, 0, 0);
   }
 
-  body.chrico-navigation--is-visible {
+  body.chrico-navigation--is-visible,html.chrico-navigation--is-visible {
     -webkit-transform: translate3d(250px, 0, 0);
     transform: translate3d(250px, 0, 0);
   }
