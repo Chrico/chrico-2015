@@ -1166,7 +1166,16 @@ input,button,textarea {
   }
 
   .chrico-search {
-    margin-right: 16px;
+    margin-right: 48px;
+  }
+
+  .chrico-search__submit {
+    margin-top: -10px;
+  }
+
+  .chrico-search__submit .icon-search {
+    width: 30px;
+    height: 45px;
   }
 }
 
@@ -1240,6 +1249,10 @@ input,button,textarea {
     display: block;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .chrico-search {
+    margin-right: 16px;
   }
 }
 

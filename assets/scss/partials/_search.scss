@@ -9,9 +9,12 @@
   margin-right: $base_padding*2;
 
   @include breakpoint(tablet-horizontal) {
-	margin-right: $base_padding;
+	margin-right: $base_padding*3;
   }
 
+  @include breakpoint(tablet) {
+	margin-right: $base_padding;
+  }
 }
 
 // <form>
@@ -120,11 +123,20 @@
 	color: $color-05;
   }
 
+  @include breakpoint(tablet-horizontal) {
+	margin-top:-10px
+  }
+
   .icon-search {
 	display: inline-block;
 	width: 22px;
 	height: 35px;
 	vertical-align: middle;
 	fill: currentcolor;
+
+	@include breakpoint(tablet-horizontal) {
+	  width: 30px;
+	  height: 45px;
+	}
   }
 }
