@@ -8,6 +8,7 @@
 * Added `editor-style.css`.
 * Improved size of search icon for mobile devices.
 * Fixed scaling bug for mobile devices when off-canvas navigation opens.
+* Improved style.css description stuff.
 
 ### 1.3
 * Improved navigation.js, added some documentation to methods.
