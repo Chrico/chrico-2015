@@ -126,14 +126,14 @@ module.exports = function (grunt) {
 					noCache    : true
 				},
 				src    : [
-					'style.scss'
+					'style.scss',
+					'editor-style.scss'
 				]
 			}
 		},
 		uglify      : {
 			theme: {
 				expand: true,
-				screwIE8: true,
 				cwd   : THEME_DIR,
 				dest  : THEME_DIR,
 				rename: function (destBase, destPath) {
