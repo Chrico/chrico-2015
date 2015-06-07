@@ -30,10 +30,12 @@ function chrico_setup() {
 		get_template_directory() . '/assets/language'
 	);
 
+
 	// the theme support
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'title-tag' );
 
 	/**
 	 * template |   size    |   device  | note
@@ -58,6 +60,11 @@ function chrico_setup() {
 	// widget
 	include_once( $vendor_dir . 'chrico/widget.php' );
 	add_action( 'widgets_init', 'chrico_widgets_init' );
+
+	// adding editor styles
+	add_editor_style(
+		get_template_directory_uri() . '/assets/css/editor-style' . chrico_get_script_suffix() . '.css'
+	);
 
 	if ( ! is_admin() ) {
 

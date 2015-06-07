@@ -292,6 +292,21 @@ body {
   padding-top: 32px;
 }
 
+.chrico-site {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.chrico-main {
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+.chrico-navigation--is-visible .chrico-main {
+  opacity: 0.3;
+}
+
 a {
   color: #2e969d;
   text-decoration: none;
@@ -347,21 +362,6 @@ h5 {
 
 h6 {
   font-size: 115%;
-}
-
-.chrico-site {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.chrico-main {
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-}
-
-.chrico-navigation--is-visible .chrico-main {
-  opacity: 0.3;
 }/* Responsive images */.post img,.comment img {
   max-width: 100%;
 }
