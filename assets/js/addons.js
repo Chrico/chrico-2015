@@ -1,8 +1,10 @@
-// baguetteBox.js _________________________________________
-// @author  feimosi
-// @version 1.3.2
-// @url https://github.com/feimosi/baguetteBox.js
-//
+/*!
+ * baguetteBox.js
+ * @author  feimosi
+ * @version 1.3.2
+ * @url https://github.com/feimosi/baguetteBox.js
+ */
+
 var baguetteBox = (function() {
 	// SVG shapes used within the buttons
 	var leftArrow = '<svg width="44" height="60">' +

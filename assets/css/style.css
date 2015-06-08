@@ -337,7 +337,8 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-size: 225%;
   font-weight: 400;
-  word-break: break-all;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 h2,h3,h4,h5 {
@@ -946,6 +947,19 @@ input,button,textarea {
   text-align: center;
 }
 
+.chrico-breadcrumbs {
+  text-align: center;
+  margin-bottom: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.chrico-navigation--is-visible .chrico-breadcrumbs {
+  opacity: 0.3;
+}
+
 #baguetteBox-overlay {
   display: none;
   opacity: 0;
@@ -1116,19 +1130,6 @@ input,button,textarea {
   animation-delay: -1.0s;
 }
 
-.chrico-breadcrumbs {
-  text-align: center;
-  margin-bottom: 0;
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.chrico-navigation--is-visible .chrico-breadcrumbs {
-  opacity: 0.3;
-}
-
 @font-face {
   font-family:'Imprima';font-style:normal;font-weight:400;src:local("Imprima"), local("Imprima-Regular"), url(http://fonts.gstatic.com/s/imprima/v4/RenkfKeNSXel7M9RBRtM1w.woff2) format("woff2"), url(http://fonts.gstatic.com/s/imprima/v4/8ZNQ9eOlWj2xmC8HToxmXw.woff) format("woff");
 }
@@ -1190,8 +1191,6 @@ input,button,textarea {
     z-index: 9;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
 
   body.chrico-navigation--is-visible {

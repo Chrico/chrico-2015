@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 1.5
+* Updated baguette.js/.css.
+* Fixed word-break for headlines on mobile view.
+* Fixed baguette.js-Bug with translate3d and position:fixed.
+* Fixed loading of Fonts
+
 ### 1.4
 * Added theme-support for `title-tag`.
 * Added missing `wp_link_pages`-function.

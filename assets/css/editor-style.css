@@ -337,7 +337,8 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-size: 225%;
   font-weight: 400;
-  word-break: break-all;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 h2,h3,h4,h5 {
@@ -594,8 +595,6 @@ body.mce-content-body,html.mce-content-body {
     z-index: 9;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
 
   body.chrico-navigation--is-visible,html.chrico-navigation--is-visible {
