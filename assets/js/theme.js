@@ -2,11 +2,11 @@
 // requires addon/baguette.js
 //
 (function () {
-	"use strict"; // jshint ~_~
+//	"use strict"; // jshint ~_~
 
-	baguetteBox.run('.chrico-gallery', {
+	baguetteBox.run('.chrico-gallery'/*, {
 		animation: 'fadeIn'
-	});
+	}*/);
 
 })();
 
