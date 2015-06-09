@@ -76,6 +76,7 @@ function chrico_setup() {
 		// styles
 		include_once( $vendor_dir . 'chrico/frontend/style.php' );
 		add_action( 'wp_enqueue_scripts', 'chrico_wp_enqueue_styles' );
+		add_filter( 'style_loader_tag', 'chrico_filter_style_loader_tag_above_the_fold', 10, 2 );
 		// move the styles directly below the wp_title() and after the <meta charset>.
 		remove_action( 'wp_head', 'wp_print_styles', 8 );
 		add_action( 'wp_head', 'wp_print_styles', 1 );
