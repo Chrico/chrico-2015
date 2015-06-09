@@ -283,7 +283,7 @@ td {
 
 body,html {
   font: 15px/1.7 Imprima, Tahoma, Arial, sans-serif;
-  background: #dadada url("../img/pattern.png");
+  background: #dadada url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
   color: #303030;
   position: relative;
 }
