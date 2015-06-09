@@ -7,6 +7,8 @@
 * Fixed word-break for headlines on mobile view.
 * Fixed baguette.js-Bug with translate3d and position:fixed.
 * Fixed loading of Fonts
+* Reduced transition time from 0.5s to 0.25s.
+* Added 'chrico'-css as inline styles to avoid render blocking.
 
 ### 1.4
 * Added theme-support for `title-tag`.
