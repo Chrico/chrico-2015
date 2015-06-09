@@ -144,7 +144,7 @@
 	  text-align: center;
 	  color: $color-00;
 	  background: $color-03;
-	  transition: all 0.5s ease-in;
+	  transition: all 0.25s ease-in;
 
 	  @include hover-state {
 		border-bottom: 0;
@@ -239,7 +239,7 @@
 	display: block;
 	color: $color-03;
 	background: transparent;
-	transition: all 0.5s ease-in;
+	transition: all 0.25s ease-in;
 
 	@include hover-state {
 	  border-bottom: 0;

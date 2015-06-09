@@ -299,8 +299,8 @@ body,html {
 }
 
 .chrico-main {
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
+  -webkit-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
 }
 
 .chrico-navigation--is-visible .chrico-main {
@@ -593,8 +593,8 @@ body.mce-content-body,html.mce-content-body {
   body,html {
     font-size: 16px;
     z-index: 9;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
   }
 
   body.chrico-navigation--is-visible,html.chrico-navigation--is-visible {
