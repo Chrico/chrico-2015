@@ -28,7 +28,7 @@ body {
   @include breakpoint(tablet) {
 	font-size:16px;
 	z-index: 9;
-	transition: all 0.5s ease-in;
+	transition: all 0.25s ease-in;
 	// it seems baguette.js has some problems with this
 	// and positioning the container correctly with "fixed
 	//transform: translate3d(0, 0, 0);
@@ -62,7 +62,7 @@ body {
 // ______________ Main Container
 
 .chrico-main {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.25s ease-in;
   @extend %clearfix;
 
   .chrico-navigation--is-visible & {

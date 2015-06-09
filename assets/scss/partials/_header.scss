@@ -7,7 +7,7 @@
 
 .chrico-header__banner {
   clear: both;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.25s ease-in;
   .chrico-navigation--is-visible & {
 	opacity: 0.3;
   }

@@ -13,7 +13,7 @@ input[type="reset"],
   background: $color-03;
   border: 0;
   width: auto;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 
   @include hover-state {
 	background: $color-04;
