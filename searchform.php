@@ -7,13 +7,11 @@
  * @package ChriCo
  */
 ?>
-<div class="chrico-search" itemscope itemtype="http://schema.org/WebSite">
+<div class="chrico-search">
 	<?php
 	$search_url = esc_url( home_url( '/' ) );
 	?>
-	<meta itemprop="url" content="<?php echo $search_url; ?>" />
-	<form class="chrico-search__form" action="<?php echo $search_url; ?>" role="search" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-		<meta itemprop="target" content="<?php echo $search_url; ?>?s={s}" />
+	<form class="chrico-search__form" action="<?php echo $search_url; ?>" role="search">
 		<?php
 		// If the search field has a value, this gets an additional class.
 		$class = '';
@@ -22,7 +20,7 @@
 		endif;
 		?>
 		<span class="chrico-search__field <?php echo $class; ?>">
-			<input itemprop="query-input" id="s" name="s" type="text" class="chrico-search__input" value="<?php the_search_query(); ?>" autocomplete="off" />
+			<input  id="s" name="s" type="text" class="chrico-search__input" value="<?php the_search_query(); ?>" autocomplete="off" />
 
 			<label class="chrico-search__label" for="s">
 				<span class="chrico-search__label-text">

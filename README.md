@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 1.6
+* Added missing stylings for `<ol>`, `<ul>` and `<p>` in post_content.
+* Added missing `clear`-selector for post_content.
+* Remove schema.org from search.
+
 ### 1.5
 * Updated baguette.js/.css.
 * Fixed word-break for headlines on mobile view.
