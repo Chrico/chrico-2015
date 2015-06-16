@@ -78,6 +78,16 @@
 // post_content
 .chrico-post__content {
 
+  ol, ul {
+	padding: 0;
+	margin: $base_padding $base_padding*2;
+  }
+
+  p {
+	margin: $base_padding 0;
+	padding: 0;
+  }
+
 }
 
 // post_excerpt

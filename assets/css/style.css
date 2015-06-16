@@ -267,6 +267,10 @@ td {
   clear: both;
 }
 
+.clear {
+  clear: both;
+}
+
 .chrico-post__inner,.chrico-widget__inner {
   background: #fff;
   margin: 32px;
@@ -342,7 +346,7 @@ h1 {
 }
 
 h2,h3,h4,h5 {
-  margin: 0.5em 0;
+  margin: 8px 0;
 }
 
 h2 {
@@ -519,6 +523,16 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 
 .chrico-post__link img {
   display: block;
+}
+
+.chrico-post__content ol,.chrico-post__content ul {
+  padding: 0;
+  margin: 16px 32px;
+}
+
+.chrico-post__content p {
+  margin: 16px 0;
+  padding: 0;
 }
 
 .chrico-post--is-singular .chrico-post__excerpt {
