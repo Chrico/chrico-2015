@@ -367,6 +367,12 @@ h5 {
 
 h6 {
   font-size: 115%;
+}
+
+.chrico-archive__title {
+  position: absolute;
+  left: -999px;
+  top: 0;
 }/* Responsive images */.post img,.comment img {
   max-width: 100%;
 }
@@ -550,6 +556,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 
 .chrico-post--is-archive .chrico-post__title {
   font-size: 135%;
+  font-weight: normal;
 }
 
 .chrico-post--is-singular {
