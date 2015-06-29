@@ -24,8 +24,8 @@ function chrico_widgets_init() {
 			'description'   => __( 'Sidebar für is_single (Beiträge)', 'chrico' ),
 			'before_widget' => '<aside id="%1$s" class="chrico-widget chrico-widget__%2$s"><div class="chrico-widget__inner">',
 			'after_widget'  => '</div></aside>',
-			'before_title'  => '<h3 class="chrico-widget__title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h4 class="chrico-widget__title">',
+			'after_title'   => '</h4>',
 		),
 		array(
 			'name'          => __( 'Page-Widget-Bereich', 'theme_chrico' ),
@@ -33,8 +33,8 @@ function chrico_widgets_init() {
 			'description'   => __( 'Sidebar für is_page (Seiten)', 'chrico' ),
 			'before_widget' => '<aside id="%1$s" class="chrico-widget chrico-widget__%2$s"><div class="chrico-widget__inner">',
 			'after_widget'  => '</div></aside>',
-			'before_title'  => '<h3 class="chrico-widget__title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h4 class="chrico-widget__title">',
+			'after_title'   => '</h4>',
 		),
 	);
 

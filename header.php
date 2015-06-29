@@ -35,7 +35,14 @@
 		<div class="chrico-header__banner" role="banner">
 			<a class="chrico-header__link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<img class="chrico-header__img" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo.svg'; ?>" width="300" height="147" alt="<?php bloginfo( 'name' ); ?>"/>
-				<span class="chrico-header__title">ChriCo</span>
+				<?php
+				if ( is_home() ) :
+					$tag = 'h1';
+				else :
+					$tag = 'span';
+				endif;
+				?>
+				<<?php echo $tag; ?> class="chrico-header__title">ChriCo</<?php echo $tag; ?>>
 			</a>
 		</div>
 

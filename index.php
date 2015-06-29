@@ -7,14 +7,23 @@
 
 get_header();
 
-if ( have_posts() ) :
+if ( is_archive() ) : ?>
+	<h1 class="chrico-archive__title"><?php echo single_cat_title( "", false ); ?></h1>
+<?php endif; ?>
 
-	while( have_posts() ) : the_post();
-		get_template_part( 'parts/content', get_post_format() );
-	endwhile;
+	<div class="chrico-main__content">
+		<?php
+		if ( have_posts() ) :
 
-	get_template_part( 'parts/pagination', 'site' );
+			while ( have_posts() ) : the_post();
+				get_template_part( 'parts/content', get_post_format() );
+			endwhile;
 
-endif;
+			get_template_part( 'parts/pagination', 'site' );
 
+		endif;
+		?>
+	</div>
+
+<?php
 get_footer();
