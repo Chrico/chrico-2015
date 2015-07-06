@@ -579,7 +579,7 @@ body.mce-content-body,html.mce-content-body {
 }
 
 @font-face {
-  font-family:'Imprima';font-style:normal;font-weight:400;src:local("Imprima"), local("Imprima-Regular"), url(http://fonts.gstatic.com/s/imprima/v4/RenkfKeNSXel7M9RBRtM1w.woff2) format("woff2"), url(http://fonts.gstatic.com/s/imprima/v4/8ZNQ9eOlWj2xmC8HToxmXw.woff) format("woff");
+  font-family:'Imprima';font-style:normal;font-weight:400;src:local("Imprima"), local("Imprima-Regular"), url(https://fonts.gstatic.com/s/imprima/v4/RenkfKeNSXel7M9RBRtM1w.woff2) format("woff2"), url(https://fonts.gstatic.com/s/imprima/v4/8ZNQ9eOlWj2xmC8HToxmXw.woff) format("woff");
 }
 
 @media (max-width: 64em) {

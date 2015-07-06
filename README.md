@@ -6,6 +6,7 @@
 * Added term title to `is_archive()` as `<h1>` and `<h2>` to posts.
 * Added `<h1>` to ChriCo on `is_home()` and `<h2>` to posts.
 * Changed Widget headlines from `<h3>` to `<h4>`.
+* Changed Google Fonts to https.
 
 ### 1.6
 * Added missing stylings for `<ol>`, `<ul>` and `<p>` in post_content.
