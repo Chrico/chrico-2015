@@ -2,7 +2,7 @@
 /**
  * Pagination for pages.
  *
- * @package ChriCo
+ * @package ChriCo\Parts\Pagination
  */
 
 $args = array(

@@ -2,7 +2,7 @@
 /**
  * Navigation footer template.
  *
- * @package ChriCo
+ * @package ChriCo\Parts\Navigation
  */
 
 $items_wrap = '';
@@ -14,7 +14,7 @@ $items_wrap .= '</nav>';
 
 $nav_args = array(
 	'theme_location' => 'chrico_footer',
-	'container'      => false,
+	'container'      => FALSE,
 	'depth'          => 1,
 	'items_wrap'     => $items_wrap,
 );
