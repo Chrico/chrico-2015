@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 1.8
+* Some clean ups on parts.
+* Code-formatting.
+* Improved documentation in parts.
+
 ### 1.7
 * Added term title to `is_archive()` as `<h1>` and `<h2>` to posts.
 * Added `<h1>` to ChriCo on `is_home()` and `<h2>` to posts.
