@@ -12,44 +12,45 @@
  * @wp-hook img_caption_shortcode
  *
  * @param   String $output
- * @param   Array $attr
+ * @param   Array  $attr
  * @param   String $content
  *
  * @return String
  */
-function chrico_filter_img_caption_shortcode($output, $attr, $content)
-{
+function chrico_filter_img_caption_shortcode( $output, $attr, $content ) {
 
-    /* We're not worried abut captions in feeds, so just return the output here. */
-    if (is_feed())
-        return $output;
+	/* We're not worried abut captions in feeds, so just return the output here. */
+	if ( is_feed() ) {
+		return $output;
+	}
 
-    /* Merge the defaults with user input. */
-    $attr = shortcode_atts(
-        array(
-            'id' => '',
-            'align' => '',
-            'width' => '',
-            'caption' => ''
-        ),
-        $attr
-    );
+	/* Merge the defaults with user input. */
+	$attr = shortcode_atts(
+		array(
+			'id'      => '',
+			'align'   => '',
+			'width'   => '',
+			'caption' => ''
+		),
+		$attr
+	);
 
-    /* If the width is less than 1 or there is no caption, return the content wrapped between the [caption]< tags. */
-    if (1 > $attr['width'] || empty($attr['caption']))
-        return $content;
+	/* If the width is less than 1 or there is no caption, return the content wrapped between the [caption]< tags. */
+	if ( 1 > $attr[ 'width' ] || empty( $attr[ 'caption' ] ) ) {
+		return $content;
+	}
 
-    /* Set up the attributes for the caption <div>. */
-    $attributes = (!empty($attr['id']) ? ' id="' . esc_attr($attr['id']) . '"' : '');
-    $attributes .= ' class="wp-caption ' . esc_attr($attr['align']) . ' chrico-gallery"';
+	/* Set up the attributes for the caption <div>. */
+	$attributes = ( ! empty( $attr[ 'id' ] ) ? ' id="' . esc_attr( $attr[ 'id' ] ) . '"' : '' );
+	$attributes .= ' class="wp-caption ' . esc_attr( $attr[ 'align' ] ) . ' chrico-gallery"';
 
-    /* Open the caption <div>. */
-    $output = '<figure' . $attributes . '>';
-    $output .= do_shortcode($content);
-    $output .= '<figcaption class="chrico-gallery__caption">' . $attr['caption'] . '</figcaption>';
-    $output .= '</figure>';
+	/* Open the caption <div>. */
+	$output = '<figure' . $attributes . '>';
+	$output .= do_shortcode( $content );
+	$output .= '<figcaption class="chrico-gallery__caption">' . $attr[ 'caption' ] . '</figcaption>';
+	$output .= '</figure>';
 
-    return $output;
+	return $output;
 }
 
 /**
@@ -58,104 +59,105 @@ function chrico_filter_img_caption_shortcode($output, $attr, $content)
  * @wp-hook post_gallery
  *
  * @param   String $output
- * @param   Array $attr
+ * @param   Array  $attr
  *
  * @return String
  */
-function chrico_filter_post_gallery($output, $attr)
-{
+function chrico_filter_post_gallery( $output, $attr ) {
 
-    $post = get_post();
+	$post = get_post();
 
-    $default_attr = array(
-        'order' => 'ASC',
-        'orderby' => 'menu_order ID',
-        'id' => $post->ID,
-        'itemtag' => 'figure',
-        'icontag' => '',
-        'captiontag' => '',
-        'columns' => 3,
-        'size' => 'thumbnail',
-        'include' => '',
-        'exclude' => ''
-    );
+	$default_attr = array(
+		'order'      => 'ASC',
+		'orderby'    => 'menu_order ID',
+		'id'         => $post->ID,
+		'itemtag'    => 'figure',
+		'icontag'    => '',
+		'captiontag' => '',
+		'columns'    => 3,
+		'size'       => 'thumbnail',
+		'include'    => '',
+		'exclude'    => ''
+	);
 
-    $attr = shortcode_atts($default_attr, $attr);
+	$attr = shortcode_atts( $default_attr, $attr );
 
-    if (!empty($attr['id'])) {
-        $attr['id'] = intval($attr['id']);
-    }
+	if ( ! empty( $attr[ 'id' ] ) ) {
+		$attr[ 'id' ] = intval( $attr[ 'id' ] );
+	}
 
-    if (!empty($attr['include'])) {
-        $include = preg_replace('/[^0-9,]+/', '', $attr['include']);
-        $post_args = array(
-            'include' => $include,
-            'post_status' => 'inherit',
-            'post_type' => 'attachment',
-            'post_mime_type' => 'image',
-            'order' => $attr['order'],
-            'orderby' => $attr['orderby']
-        );
-        $_attachments = get_posts($post_args);
-        $attachments = array();
-        foreach ($_attachments as $key => $val) {
-            $attachments[$val->ID] = $_attachments[$key];
-        }
+	if ( ! empty( $attr[ 'include' ] ) ) {
+		$include      = preg_replace( '/[^0-9,]+/', '', $attr[ 'include' ] );
+		$post_args    = array(
+			'include'        => $include,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $attr[ 'order' ],
+			'orderby'        => $attr[ 'orderby' ]
+		);
+		$_attachments = get_posts( $post_args );
+		$attachments  = array();
+		foreach ( $_attachments as $key => $val ) {
+			$attachments[ $val->ID ] = $_attachments[ $key ];
+		}
 
-    } else if (!empty($attr['exclude'])) {
-        $exclude = preg_replace('/[^0-9,]+/', '', $attr['exclude']);
-        $post_args = array(
-            'post_parent' => $attr['id'],
-            'exclude' => $exclude,
-            'post_status' => 'inherit',
-            'post_type' => 'attachment',
-            'post_mime_type' => 'image',
-            'order' => $attr['order'],
-            'orderby' => $attr['orderby']
-        );
-        $attachments = get_children($post_args);
+	} else if ( ! empty( $attr[ 'exclude' ] ) ) {
+		$exclude     = preg_replace( '/[^0-9,]+/', '', $attr[ 'exclude' ] );
+		$post_args   = array(
+			'post_parent'    => $attr[ 'id' ],
+			'exclude'        => $exclude,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $attr[ 'order' ],
+			'orderby'        => $attr[ 'orderby' ]
+		);
+		$attachments = get_children( $post_args );
 
-    } else {
-        $post_args = array(
-            'post_parent' => $attr['id'],
-            'post_status' => 'inherit',
-            'post_type' => 'attachment',
-            'post_mime_type' => 'image',
-            'order' => $attr['order'],
-            'orderby' => $attr['orderby']
-        );
-        $attachments = get_children($post_args);
-    }
+	} else {
+		$post_args   = array(
+			'post_parent'    => $attr[ 'id' ],
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $attr[ 'order' ],
+			'orderby'        => $attr[ 'orderby' ]
+		);
+		$attachments = get_children( $post_args );
+	}
 
-    if (empty($attachments)) {
-        return '';
-    }
+	if ( empty( $attachments ) ) {
+		return '';
+	}
 
-    if (is_feed()) {
-        $output = "\n";
-        foreach ($attachments as $att_id => $attachment)
-            $output .= wp_get_attachment_link($att_id, $attr['size'], true) . "\n";
-        return $output;
-    }
+	if ( is_feed() ) {
+		$output = "\n";
+		foreach ( $attachments as $att_id => $attachment ) {
+			$output .= wp_get_attachment_link( $att_id, $attr[ 'size' ], TRUE ) . "\n";
+		}
 
-    $output .= '<div class="chrico-gallery">';
-    foreach ($attachments as $id => $attachment) {
-        $origin_attachment = wp_get_attachment_image_src($id, 'large');
-        $caption = '';
-        if (trim($attachment->post_content)) {
-            $caption = $attachment->post_content;
-        } else if (trim($attachment->post_title)) {
-            $caption = $attachment->post_title;
-        }
+		return $output;
+	}
 
-        $output .= '<' . $attr['itemtag'] . ' class="wp-caption alignleft">';
-        $output .= '<a href="' . $origin_attachment[0] . '" title="' . esc_attr($caption) . '">';
-        $output .= wp_get_attachment_image($id, 'thumbnail');
-        $output .= '</a>';
-        $output .= '</' . $attr['itemtag'] . '>';
+	$output .= '<div class="chrico-gallery">';
+	foreach ( $attachments as $id => $attachment ) {
+		$origin_attachment = wp_get_attachment_image_src( $id, 'large' );
+		$caption           = '';
+		if ( trim( $attachment->post_content ) ) {
+			$caption = $attachment->post_content;
+		} else if ( trim( $attachment->post_title ) ) {
+			$caption = $attachment->post_title;
+		}
 
-    }
-    $output .= '</div>';
+		$output .= '<' . $attr[ 'itemtag' ] . ' class="wp-caption alignleft">';
+		$output .= '<a href="' . $origin_attachment[ 0 ] . '" title="' . esc_attr( $caption ) . '">';
+		$output .= wp_get_attachment_image( $id, 'thumbnail' );
+		$output .= '</a>';
+		$output .= '</' . $attr[ 'itemtag' ] . '>';
 
-    return $output;
+	}
+	$output .= '</div>';
+
+	return $output;
 }

@@ -11,8 +11,7 @@
  * @wp-hook wp_footer
  * @return  void
  */
-function chrico_filter_wp_footer_add_google_analytics()
-{
+function chrico_filter_wp_footer_add_google_analytics() {
     ?>
     <script>
         (function (i, s, o, g, r, a, m) {
