@@ -2,13 +2,13 @@
 // ______________ ChriCo Theme elements
 
 %chrico-box {
-  background: #fff;
-  margin: $base_padding*2;
-  padding: $base_padding*0.5 $base_padding;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	background: #fff;
+	margin: $base_padding*2;
+	padding: $base_padding*0.5 $base_padding;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 
-  @include breakpoint(tablet) {
-	margin-left: $base_padding;
-	margin-right: $base_padding;
-  }
+	@include breakpoint(tablet) {
+		margin-left: $base_padding;
+		margin-right: $base_padding;
+	}
 }

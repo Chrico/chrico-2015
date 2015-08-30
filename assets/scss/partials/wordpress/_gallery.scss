@@ -3,11 +3,11 @@
 // ______________ Gallery
 
 .chrico-gallery {
-  @extend %clearfix;
+	@extend %clearfix;
 }
 
 .chrico-gallery__caption {
-  color: $color-04;
-  font-style: italic;
-  font-size: 80%;
+	color: $color-04;
+	font-style: italic;
+	font-size: 80%;
 }

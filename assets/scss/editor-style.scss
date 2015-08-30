@@ -18,10 +18,13 @@
 //   * extend in tinyMCE the <body> on the <html>-Element.
 //   * the "%chrico-box"-Styles on the <body> with class (stronger selector than default styles).
 //   * add !important to padding to avoid overwriting. :-(
+//   * add the imprima family to body, because we have no fontobserver.js in backend
 html {
-  @extend body;
+	@extend body;
 }
+
 body.mce-content-body {
-  @extend %chrico-box;
-  padding: $base_padding*0.5 $base_padding !important;
+	@extend %chrico-box;
+	padding: $base_padding*0.5 $base_padding !important;
+	font-family: 'Imprima', sans-serif;
 }

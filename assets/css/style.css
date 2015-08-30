@@ -286,10 +286,14 @@ td {
 }
 
 body {
-  font: 15px/1.7 Imprima, Tahoma, Arial, sans-serif;
+  font: 15px/1.7 Tahoma, Arial, sans-serif;
   background: #dadada url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
   color: #303030;
   position: relative;
+}
+
+body.font-imprima--is-loaded {
+  font-family: Imprima, sans-serif;
 }
 
 .admin-bar {

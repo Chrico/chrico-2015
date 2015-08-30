@@ -1,14 +1,25 @@
+// Fonts _________________________________________
+// requires polyfill/fontobserver.js
+//
+(function(body) {
+	//	"use strict"; // jshint ~_~
+	var observer = new FontFaceObserver('Imprima', {});
+	observer.check().then(function(){
+		body.classList.add('font-imprima--is-loaded');
+	});
+
+})(document.body);
+
 // Gallery Popup-Stuff _________________________________________
 // requires addon/baguette.js
-//
-(function () {
-//	"use strict"; // jshint ~_~
+( function() {
+	//	"use strict"; // jshint ~_~
 
-	baguetteBox.run('.chrico-gallery'/*, {
-		animation: 'fadeIn'
-	}*/);
+	baguetteBox.run( '.chrico-gallery'/*, {
+	 animation: 'fadeIn'
+	 }*/ );
 
-})();
+} )();
 
 // Navigation  _________________________________________
 // responsive navigation

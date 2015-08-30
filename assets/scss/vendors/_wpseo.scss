@@ -2,14 +2,14 @@
 // ______________ wordpress-seo
 
 .chrico-breadcrumbs {
-  text-align:center;
-  margin-bottom:0;
-  transition: opacity 0.25s ease-in;
-  padding-left: $base_padding;
-  padding-right: $base_padding;
+	text-align: center;
+	margin-bottom: 0;
+	transition: opacity 0.25s ease-in;
+	padding-left: $base_padding;
+	padding-right: $base_padding;
 
-  .chrico-navigation--is-visible & {
-	opacity: 0.3;
-  }
+	.chrico-navigation--is-visible & {
+		opacity: 0.3;
+	}
 
 }
