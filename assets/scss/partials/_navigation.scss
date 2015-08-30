@@ -13,61 +13,61 @@
 // ______________ Navigation Toggle Button
 
 .chrico-navigation__toggle {
-  display: none;
-  height: 25px; // 5px first bar, 5px space, 5px middle bar, 5px space, 5px last bar
-  margin-top: 20px;
-  margin-left: $base_padding;
-  float:left;
+	display: none;
+	height: 25px; // 5px first bar, 5px space, 5px middle bar, 5px space, 5px last bar
+	margin-top: 20px;
+	margin-left: $base_padding;
+	float: left;
 
-  @include hover-state {
-	border: 0;
-  }
+	@include hover-state {
+		border: 0;
+	}
 
-  @include breakpoint(tablet) {
-	display: block;
-  }
+	@include breakpoint(tablet) {
+		display: block;
+	}
 
-  span,
-  span:before,
-  span:after {
-	height: 5px;
-	width: 35px;
-	background: $color-03;
-	position: relative;
-	display: block;
-	content: '';
-	transition: all 500ms ease-in-out;
-  }
+	span,
+	span:before,
+	span:after {
+		height: 5px;
+		width: 35px;
+		background: $color-03;
+		position: relative;
+		display: block;
+		content: '';
+		transition: all 500ms ease-in-out;
+	}
 
-  & span:before {
-	top: 10px;
-  }
-  & span:after {
-	top: 15px;
-  }
+	& span:before {
+		top: 10px;
+	}
+	& span:after {
+		top: 15px;
+	}
 
 }
 
 .chrico-navigation__toggle--is-active {
 
-  span,
-  span:before,
-  span:after {
-	top: 0;
-  }
-
-  span {
-	background: transparent;
-
-	&:before {
-	  transform: translateY(10px) rotate(45deg);
+	span,
+	span:before,
+	span:after {
+		top: 0;
 	}
 
-	&:after {
-	  transform: rotate(-45deg);
-	  top: 5px;
+	span {
+		background: transparent;
+
+		&:before {
+			transform: translateY(10px) rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+			top: 5px;
+		}
 	}
-  }
 
 }
 
@@ -77,17 +77,17 @@
 
 .chrico-navigation {
 
-  ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	clear: both;
-	@extend %clearfix;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		clear: both;
+		@extend %clearfix;
 
-	@include breakpoint(tablet) {
-	  margin: 0;
+		@include breakpoint(tablet) {
+			margin: 0;
+		}
 	}
-  }
 
 }
 
@@ -96,17 +96,17 @@
 
 .chrico-navigation__footer {
 
-  li {
-	display: inline-block;
-	border-left: 1px solid $color-03;
-	text-align: center;
-	vertical-align: middle;
-	padding: 0 $base_padding;
+	li {
+		display: inline-block;
+		border-left: 1px solid $color-03;
+		text-align: center;
+		vertical-align: middle;
+		padding: 0 $base_padding;
 
-	&:first-child {
-	  border: 0;
+		&:first-child {
+			border: 0;
+		}
 	}
-  }
 
 }
 
@@ -115,95 +115,95 @@
 
 .chrico-navigation__header {
 
-  @include breakpoint(tablet) {
-	// body will be moved by adding the "chrico-navigation--is-visible"-Class by 250px to the right.
-	position: absolute;
-	top: 0;
-	left: -250px;
-	width: 250px;
-	height: 100%;
-	background: $color-03;
-  }
-
-  .menu-item {
-	width: 33%;
-	float: left;
-	position: relative; // required for .sub-menu position: absolute;
-
 	@include breakpoint(tablet) {
-	  width: 100%;
-	  float: none;
-	  border-bottom: 1px solid $color-00;
+		// body will be moved by adding the "chrico-navigation--is-visible"-Class by 250px to the right.
+		position: absolute;
+		top: 0;
+		left: -250px;
+		width: 250px;
+		height: 100%;
+		background: $color-03;
 	}
 
-	a {
-	  font-size: 20px;
-	  display: block;
-	  margin: 0 $base_padding*2;
-	  padding: $base_padding;
-	  text-align: center;
-	  color: $color-00;
-	  background: $color-03;
-	  transition: all 0.25s ease-in;
+	.menu-item {
+		width: 33%;
+		float: left;
+		position: relative; // required for .sub-menu position: absolute;
 
-	  @include hover-state {
-		border-bottom: 0;
-		color: $color-03;
-		background: $color-00;
-	  }
+		@include breakpoint(tablet) {
+			width: 100%;
+			float: none;
+			border-bottom: 1px solid $color-00;
+		}
 
-	  @include breakpoint(tablet) {
-		margin-left: 0;
-		margin-right: 0;
-	  }
+		a {
+			font-size: 20px;
+			display: block;
+			margin: 0 $base_padding*2;
+			padding: $base_padding;
+			text-align: center;
+			color: $color-00;
+			background: $color-03;
+			transition: all 0.25s ease-in;
 
+			@include hover-state {
+				border-bottom: 0;
+				color: $color-03;
+				background: $color-00;
+			}
+
+			@include breakpoint(tablet) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+		}
 	}
-  }
 
 }
 
 // ______________ Subnavigation in header
 //
 .chrico-sub-navigation {
-  display: none;
-  position: absolute;
-  left: 0;
-  width: 100%;
-
-  // same as marginLeft/Right of parent.
-  padding-left: $base_padding*2;
-  padding-right: $base_padding*2;
-
-  @include breakpoint(tablet) {
-	position: static;
-	display: block;
-	padding-left: 0;
-	padding-right: 0;
-  }
-
-  &--is-visible & {
-	display: block;
-
-  }
-
-  .sub-menu {
-	margin: 0;
-  }
-
-  .menu-item {
+	display: none;
+	position: absolute;
+	left: 0;
 	width: 100%;
-	float: none;
 
-	a {
-	  color: $color-03;
-	  background: $color-00;
-	  margin: 0;
+	// same as marginLeft/Right of parent.
+	padding-left: $base_padding*2;
+	padding-right: $base_padding*2;
 
-	  @include hover-state {
-		color: $color-04;
-	  }
+	@include breakpoint(tablet) {
+		position: static;
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
 	}
-  }
+
+	&--is-visible & {
+		display: block;
+
+	}
+
+	.sub-menu {
+		margin: 0;
+	}
+
+	.menu-item {
+		width: 100%;
+		float: none;
+
+		a {
+			color: $color-03;
+			background: $color-00;
+			margin: 0;
+
+			@include hover-state {
+				color: $color-04;
+			}
+		}
+	}
 
 }
 
@@ -211,47 +211,47 @@
 // ______________ Pagination site and comment
 
 .chrico-pagination {
-  clear: both;
-  width: 100%;
-  font-weight: 300;
-  text-align: center;
+	clear: both;
+	width: 100%;
+	font-weight: 300;
+	text-align: center;
 }
 
 .page-numbers {
-  display: inline-block;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: hidden;
-  padding: 0;
-  vertical-align: middle;
+	display: inline-block;
+	margin-left: 0;
+	margin-right: 0;
+	overflow: hidden;
+	padding: 0;
+	vertical-align: middle;
 
-  li {
-	display: inline;
-	float: left;
-  }
-
-  .current,
-  & {
-	padding: $base_padding*0.5 $base_padding;
-  }
-
-  a {
-	display: block;
-	color: $color-03;
-	background: transparent;
-	transition: all 0.25s ease-in;
-
-	@include hover-state {
-	  border-bottom: 0;
-	  color: $color-00;
-	  background: $color-03;
+	li {
+		display: inline;
+		float: left;
 	}
-  }
 
-  .current {
-	border-bottom: 0;
-	color: $color-00;
-	background: $color-03;
-  }
+	.current,
+	& {
+		padding: $base_padding*0.5 $base_padding;
+	}
+
+	a {
+		display: block;
+		color: $color-03;
+		background: transparent;
+		transition: all 0.25s ease-in;
+
+		@include hover-state {
+			border-bottom: 0;
+			color: $color-00;
+			background: $color-03;
+		}
+	}
+
+	.current {
+		border-bottom: 0;
+		color: $color-00;
+		background: $color-03;
+	}
 
 }

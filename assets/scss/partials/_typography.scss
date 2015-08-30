@@ -2,28 +2,28 @@
 // ______________ Links
 
 a {
-  color: $color-03;
-  text-decoration: none;
-  @include hover-state {
-	color: $color-04;
-	border-bottom: 1px dotted $color-04;
-  }
+	color: $color-03;
+	text-decoration: none;
+	@include hover-state {
+		color: $color-04;
+		border-bottom: 1px dotted $color-04;
+	}
 }
 
 .icon {
-  fill: currentcolor;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
+	fill: currentcolor;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
 }
 
 //****************************************************************************
 // ______________ Blockquote
 
 blockquote {
-  background: $color-07;
-  color: $color-05;
+	background: $color-07;
+	color: $color-05;
 }
 
 //****************************************************************************
@@ -34,39 +34,39 @@ h2, h3,
 h4,
 h5,
 h6 {
-  clear: both;
+	clear: both;
 }
 
 h1 {
-  font-size: 225%;
-  font-weight: 400;
-  word-wrap: break-word;
-  word-break: break-word;
+	font-size: 225%;
+	font-weight: 400;
+	word-wrap: break-word;
+	word-break: break-word;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  margin: ($base_padding/2) 0;
+	margin: ($base_padding/2) 0;
 }
 
 h2 {
-  font-size: 200%;
+	font-size: 200%;
 }
 
 h3 {
-  font-size: 175%;
+	font-size: 175%;
 }
 
 h4 {
-  font-size: 150%
+	font-size: 150%
 }
 
 h5 {
-  font-size: 125%
+	font-size: 125%
 }
 
 h6 {
-  font-size: 115%;
+	font-size: 115%;
 }

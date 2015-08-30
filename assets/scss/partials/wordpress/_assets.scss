@@ -1,37 +1,37 @@
 /* Responsive images */
 .post img,
 .comment img {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
-  height: auto;
+	height: auto;
 }
 
 .size-full,
 .size-large,
 .header-image,
 .wp-post-image {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* Responsive videos */
 .video__container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 }
 
 .video__container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* Make sure videos and embeds fit their containers */
@@ -39,23 +39,23 @@ embed,
 iframe,
 object,
 video {
-  max-width: 100%;
-  margin-bottom: 1.7em;
+	max-width: 100%;
+	margin-bottom: 1.7em;
 }
 
 /* Images */
 .alignleft {
-  float: left;
-  margin: 0.85em 1.2em 0.85em 0;
+	float: left;
+	margin: 0.85em 1.2em 0.85em 0;
 }
 
 .alignright {
-  float: right;
-  margin: 0.85em 0 0.85em 1.7em;
+	float: right;
+	margin: 0.85em 0 0.85em 1.7em;
 }
 
 .aligncenter {
-  display: block;
-  margin: 0.85em auto;
-  text-align: center;
+	display: block;
+	margin: 0.85em auto;
+	text-align: center;
 }

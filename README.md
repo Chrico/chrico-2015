@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 1.9
+* Added polyfill/fontobserver.js and theme/font.js to improve font-loading performance.
+* SASS code-formatting.
+
 ### 1.8
 * Some clean ups on parts.
 * Code-formatting.

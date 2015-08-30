@@ -3,69 +3,72 @@
 
 *,
 input[type="search"] {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 
 //****************************************************************************
 // ______________ HTML
 
 html {
-  @include breakpoint(tablet) {
-	overflow-x: hidden;
-  }
+	@include breakpoint(tablet) {
+		overflow-x: hidden;
+	}
 }
 
 //****************************************************************************
 // ______________ Body
 
 body {
-  font: 15px/1.7 Imprima, Tahoma, Arial, sans-serif;
-  background: $color-01 url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
-  color: $color-05;
-  position: relative;
+	font: 15px/1.7 Tahoma, Arial, sans-serif;
+	background: $color-01 url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
+	color: $color-05;
+	position: relative;
 
-  @include breakpoint(tablet) {
-	font-size:16px;
-	z-index: 9;
-	transition: all 0.25s ease-in;
-	// it seems baguette.js has some problems with this
-	// and positioning the container correctly with "fixed
-	//transform: translate3d(0, 0, 0);
-
-	&.chrico-navigation--is-visible {
-	  transform: translate3d(250px, 0, 0); // moving the left container 250px to the left
-
+	&.font-imprima--is-loaded {
+		font-family: Imprima, sans-serif;
 	}
-  }
+
+	@include breakpoint(tablet) {
+		font-size: 16px;
+		z-index: 9;
+		transition: all 0.25s ease-in;
+		// it seems baguette.js has some problems with this
+		// and positioning the container correctly with "fixed
+		//transform: translate3d(0, 0, 0);
+
+		&.chrico-navigation--is-visible {
+			transform: translate3d(250px, 0, 0); // moving the left container 250px to the left
+
+		}
+	}
 
 }
 
 // some basic styling for the admin bar to support the theme properly
 .admin-bar {
-  padding-top: 32px;
-  @include breakpoint(tablet) {
-	padding-top: 46px;
-  }
+	padding-top: 32px;
+	@include breakpoint(tablet) {
+		padding-top: 46px;
+	}
 }
 
 //****************************************************************************
 // ______________ Site Container
 
 .chrico-site {
-  max-width: $max-width;
-  width: 100%;
-  margin: $margin-center;
+	max-width: $max-width;
+	width: 100%;
+	margin: $margin-center;
 }
 
 //****************************************************************************
 // ______________ Main Container
 
 .chrico-main {
-  transition: opacity 0.25s ease-in;
-  @extend %clearfix;
+	transition: opacity 0.25s ease-in;
+	@extend %clearfix;
 
-  .chrico-navigation--is-visible & {
-	opacity: 0.3;
-  }
+	.chrico-navigation--is-visible & {
+		opacity: 0.3;
+	}
 }

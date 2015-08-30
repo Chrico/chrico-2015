@@ -6,62 +6,62 @@
 }
 
 .chrico-comments__list {
-  padding: 0;
+	padding: 0;
 }
 
 .chrico-comments__title,
 .comment-reply-title {
-  font-size: 150%;
+	font-size: 150%;
 }
 
 // the_comment();
 .chrico-comment {
-  margin: 0;
-  padding: $base_padding*0.5;
-  list-style: none;
+	margin: 0;
+	padding: $base_padding*0.5;
+	list-style: none;
 
-  /* avatar */
-  .avatar {
-	display: inline;
-	float: left;
-	margin-right: $base_padding;
-  }
-
-  .fn {
-	display: block;
-  }
-
-  .children {
-	margin-left: $base_padding*2;
-	padding: 0;
-
-	.chrico-comment {
-	  padding-left: $base_padding;
+	/* avatar */
+	.avatar {
+		display: inline;
+		float: left;
+		margin-right: $base_padding;
 	}
 
-  }
+	.fn {
+		display: block;
+	}
+
+	.children {
+		margin-left: $base_padding*2;
+		padding: 0;
+
+		.chrico-comment {
+			padding-left: $base_padding;
+		}
+
+	}
 }
 
 /* meta */
 .chrico-comment__meta {
-  margin: 0;
-  overflow: hidden;
-  position: relative;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
 
-  img {
-	border-radius: 50%;
-  }
+	img {
+		border-radius: 50%;
+	}
 }
 
 /* content */
 .chrico-comment__content {
-  position: relative;
-  @extend %clearfix;
+	position: relative;
+	@extend %clearfix;
 }
 
 .comment-reply-link {
-  display: block;
-  float: right;
+	display: block;
+	float: right;
 }
 
 //****************************************************************************
@@ -69,20 +69,20 @@
 // ______________ Comment Form
 
 #respond {
-  margin-top: $base_padding*2;
+	margin-top: $base_padding*2;
 
-  form {
-	margin: $base_padding*2 0;
-  }
+	form {
+		margin: $base_padding*2 0;
+	}
 
-  label {
-	display: block;
-	line-height: 1.7;
-  }
+	label {
+		display: block;
+		line-height: 1.7;
+	}
 
-  .form-submit {
-	margin-top: $base_padding;
-  }
+	.form-submit {
+		margin-top: $base_padding;
+	}
 
 }
 
@@ -99,23 +99,23 @@
 }
 
 #cancel-comment-reply-link {
-  margin-left: 0;
-  font-weight: normal;
-  font-size: 75%;
-  display: block;
+	margin-left: 0;
+	font-weight: normal;
+	font-size: 75%;
+	display: block;
 }
 
 .required {
-  color: red;
+	color: red;
 }
 
 .logged-in-as,
 .comment-notes {
-  margin-bottom: $base_padding;
+	margin-bottom: $base_padding;
 }
 
 .form-allowed-tags {
-  margin: 0;
-  line-height: 2;
-  color: #5e5e5e;
+	margin: 0;
+	line-height: 2;
+	color: #5e5e5e;
 }

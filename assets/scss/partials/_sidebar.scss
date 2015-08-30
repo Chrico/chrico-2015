@@ -1,5 +1,5 @@
 .chrico-sidebar {
-  @extend %clearfix;
+	@extend %clearfix;
 }
 
 //****************************************************************************
@@ -7,14 +7,14 @@
 // ______________ Right Sidebar Area
 
 .chrico-sidebar__right {
-  width: 30%;
-  float: right;
-  align-content: flex-start;
+	width: 30%;
+	float: right;
+	align-content: flex-start;
 
-  @include breakpoint(tablet-horizontal) {
-	width: 100%;
-	float: none;
-  }
+	@include breakpoint(tablet-horizontal) {
+		width: 100%;
+		float: none;
+	}
 
 }
 
@@ -23,51 +23,50 @@
 // ______________ Widgets
 
 .chrico-widget {
-  width: 100%;
-
-  @include breakpoint(tablet-horizontal) {
-	width: 50%;
-	float: left;
-  }
-
-  @include breakpoint(mobile-horizontal) {
 	width: 100%;
-	float: none;
-  }
 
-  ul,
-  li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-  }
+	@include breakpoint(tablet-horizontal) {
+		width: 50%;
+		float: left;
+	}
+
+	@include breakpoint(mobile-horizontal) {
+		width: 100%;
+		float: none;
+	}
+
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
 }
 
 .chrico-widget__inner {
-  @extend %chrico-box;
+	@extend %chrico-box;
 }
 
 .chrico-widget__title {
-  font-size: 110%;
-  font-weight: bold;
-  color: $color-06;
-  margin-bottom: $base_padding;
-  margin-top: 0;
+	font-size: 110%;
+	font-weight: bold;
+	color: $color-06;
+	margin-bottom: $base_padding;
+	margin-top: 0;
 }
-
 
 //****************************************************************************
 
 // ______________ ChriCo Author Widget
 
 .chrico-author-widget__avatar {
-  text-align:center;
+	text-align: center;
 
-  img {
-	max-width: 100%;
-	width: auto;
-	height: auto;
-	border-radius: 50%;
-  }
+	img {
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		border-radius: 50%;
+	}
 }

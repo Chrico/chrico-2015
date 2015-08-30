@@ -6,52 +6,52 @@
 }
 
 .chrico-post__inner {
-  @extend %chrico-box;
-  min-height: 450px;
+	@extend %chrico-box;
+	min-height: 450px;
 
-  // for smaller devices on 1-columnar posts, we don't need a min-height
-  @include breakpoint(tablet) {
-	min-height:100%;
-  }
+	// for smaller devices on 1-columnar posts, we don't need a min-height
+	@include breakpoint(tablet) {
+		min-height: 100%;
+	}
 }
 
 .chrico-post__meta {
-  font-size:14px;
-  text-align: center;
-  margin: ($base_padding/2) 0;
+	font-size: 14px;
+	text-align: center;
+	margin: ($base_padding/2) 0;
 }
 
 .chrico-post__link {
-  display: block;
-
-  @include hover-state {
-	border: 0;
-  }
-
-  img {
 	display: block;
-  }
 
-// TODO: helle Bilder und so mit weißen Text drauf..
-//	add blur effect for archive pages
-//  .chrico-post--is-archive & {
-//		overflow: hidden;
-//		position: relative;
-//
-//		@include hover-state {
-//	 		img {
-//				filter: blur(3px);
-//	  	}
-//	  	.chrico-post__link-read-more {
-//			opacity: 1;
-//	  	}
-//	}
-//
-//		img,
-//		.chrico-post__link-read-more {
-//	  		transition: all 0.5s ease-in;
-//		}
-//	}
+	@include hover-state {
+		border: 0;
+	}
+
+	img {
+		display: block;
+	}
+
+	// TODO: helle Bilder und so mit weißen Text drauf..
+	//	add blur effect for archive pages
+	//  .chrico-post--is-archive & {
+	//		overflow: hidden;
+	//		position: relative;
+	//
+	//		@include hover-state {
+	//	 		img {
+	//				filter: blur(3px);
+	//	  	}
+	//	  	.chrico-post__link-read-more {
+	//			opacity: 1;
+	//	  	}
+	//	}
+	//
+	//		img,
+	//		.chrico-post__link-read-more {
+	//	  		transition: all 0.5s ease-in;
+	//		}
+	//	}
 
 }
 
@@ -74,62 +74,61 @@
 //  text-align: center;
 //}
 
-
 // post_content
 .chrico-post__content {
 
-  ol, ul {
-	padding: 0;
-	margin: $base_padding $base_padding*2;
-  }
+	ol, ul {
+		padding: 0;
+		margin: $base_padding $base_padding*2;
+	}
 
-  p {
-	margin: $base_padding 0;
-	padding: 0;
-  }
+	p {
+		margin: $base_padding 0;
+		padding: 0;
+	}
 
 }
 
 // post_excerpt
 .chrico-post__excerpt {
-  // on singular pages, excerpt is bold.
-  .chrico-post--is-singular & {
-	font-weight: 600;
-  }
+	// on singular pages, excerpt is bold.
+	.chrico-post--is-singular & {
+		font-weight: 600;
+	}
 }
 
 //****************************************************************************
 // ______________ Archive-Posts
 
 .chrico-post--is-archive {
-  width: 33%;
-  float: left;
-
-  &:nth-child(3n+1) {
-	clear: left;
-  }
-
-  @include breakpoint(tablet-horizontal) {
-	width: 50%;
-
-	&:nth-child(2n+1) {
-	  clear: left;
-	}
+	width: 33%;
+	float: left;
 
 	&:nth-child(3n+1) {
-	  clear: none;
+		clear: left;
 	}
 
-  }
-  @include breakpoint(tablet) {
-	width: 100%;
-	float: none;
-  }
+	@include breakpoint(tablet-horizontal) {
+		width: 50%;
 
-  .chrico-post__title {
-	font-size: 135%;
-	font-weight: normal;
-  }
+		&:nth-child(2n+1) {
+			clear: left;
+		}
+
+		&:nth-child(3n+1) {
+			clear: none;
+		}
+
+	}
+	@include breakpoint(tablet) {
+		width: 100%;
+		float: none;
+	}
+
+	.chrico-post__title {
+		font-size: 135%;
+		font-weight: normal;
+	}
 }
 
 //****************************************************************************
@@ -137,12 +136,12 @@
 // ______________ Singular Posts
 
 .chrico-post--is-singular {
-  width: 70%;
-  float: left;
-  @include breakpoint(tablet-horizontal) {
-	width: 100%;
-	float: none;
-  }
+	width: 70%;
+	float: left;
+	@include breakpoint(tablet-horizontal) {
+		width: 100%;
+		float: none;
+	}
 }
 
 //****************************************************************************
@@ -150,7 +149,7 @@
 // ______________ Post Thumbnail
 
 .chrico-post__thumbnail {
-  // negative margin to fit the image into complete box
-  // see paddings in placeholder %chrico-box
-  margin: (-$base_padding*0.5) (-$base_padding) 0;
+	// negative margin to fit the image into complete box
+	// see paddings in placeholder %chrico-box
+	margin: (-$base_padding*0.5) (-$base_padding) 0;
 }
