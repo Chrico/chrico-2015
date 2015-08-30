@@ -580,6 +580,7 @@ img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"] {
 
 body.mce-content-body,html.mce-content-body {
   padding: 8px 16px !important;
+  font-family: 'Imprima', sans-serif;
 }
 
 @font-face {
