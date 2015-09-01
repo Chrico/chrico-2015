@@ -6,6 +6,7 @@
 * Added Version to editor-style.css.
 * Added polyfill/fontobserver.js and theme/font.js to improve font-loading performance.
 * SASS code-formatting.
+* Fixed typo in folder name.
 
 ### 1.8
 * Some clean ups on parts.
