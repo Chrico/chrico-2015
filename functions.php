@@ -70,7 +70,6 @@ function chrico_setup() {
 		// scripts
 		include_once( $vendor_dir . 'chrico/frontend/script.php' );
 		add_action( 'wp_enqueue_scripts', 'chrico_wp_enqueue_scripts' );
-		add_filter( 'script_loader_tag', 'chrico_filter_script_loader_tag_inline_theme_js', 10, 2 );
 
 		// styles
 		include_once( $vendor_dir . 'chrico/frontend/style.php' );

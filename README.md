@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 2.0
+* Removed inline JS.
+
 ### 1.9
 * Added Version to editor-style.css.
 * Added polyfill/fontobserver.js and theme/font.js to improve font-loading performance.

@@ -7,31 +7,6 @@
  */
 
 /**
- *
- *
- * @wp-hook script_loader_tag
- *
- * @param   string $html
- * @param   string $handle
- *
- * @return string $html
- */
-function chrico_filter_script_loader_tag_inline_theme_js( $html, $handle ) {
-
-	global $wp_scripts;
-
-	if ( in_array( $handle, array( 'chrico-polyfills', 'chrico-theme' ) ) ) {
-		$script = $wp_scripts->registered[ $handle ];
-		$script = file_get_contents( $script->src );
-		if ( ! ! $script ) {
-			$html = '<script id="' . $handle . '-js">' . $script . '</script>';
-		}
-	}
-
-	return $html;
-}
-
-/**
  * Enqueue styles and scripts.
  *
  * @wp-hook wp_enqueue_scripts
@@ -81,33 +56,44 @@ function chrico_wp_enqueue_scripts() {
  */
 function chrico_get_scripts() {
 
-	$suffix = chrico_get_script_suffix();
+	$js_uri  = get_template_directory_uri() . '/assets/js/';
+	$suffix  = chrico_get_script_suffix();
+	$version = chrico_get_script_version();
 
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'in_footer' => $in_footer )
 	$scripts = array();
 
 	// adding some polyfills
 	$scripts[ 'chrico-polyfills' ] = array(
-		'src'       => get_template_directory_uri() . '/assets/js/polyfills' . $suffix . '.js',
+		'src'       => $js_uri . 'polyfills' . $suffix . '.js',
 		'deps'      => NULL,
-		'version'   => chrico_get_script_version(),
-		'in_footer' => TRUE
+		'version'   => $version,
+		'in_footer' => TRUE,
+		'data'      => array(
+			'loadJS' => TRUE,
+		)
 	);
 
 	// adding some addons
 	$scripts[ 'chrico-addons' ] = array(
-		'src'       => get_template_directory_uri() . '/assets/js/addons' . $suffix . '.js',
+		'src'       => $js_uri . 'addons' . $suffix . '.js',
 		'deps'      => array( 'chrico-polyfills' ),
-		'version'   => chrico_get_script_version(),
-		'in_footer' => TRUE
+		'version'   => $version,
+		'in_footer' => TRUE,
+		'data'      => array(
+			'loadJS' => TRUE,
+		)
 	);
 
 	// adding the theme stuff
 	$scripts[ 'chrico-theme' ] = array(
-		'src'       => get_template_directory_uri() . '/assets/js/theme' . $suffix . '.js',
+		'src'       => $js_uri . 'theme' . $suffix . '.js',
 		'deps'      => array( 'chrico-polyfills', 'chrico-addons' ),
-		'version'   => chrico_get_script_version(),
-		'in_footer' => TRUE
+		'version'   => $version,
+		'in_footer' => TRUE,
+		'data'      => array(
+			'loadJS' => TRUE,
+		)
 	);
 
 	// adding the theme stuff
