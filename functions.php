@@ -94,10 +94,6 @@ function chrico_setup() {
 		add_filter( 'img_caption_shortcode', 'chrico_filter_img_caption_shortcode', 10, 3 );
 		add_filter( 'post_gallery', 'chrico_filter_post_gallery', 10, 2 );
 
-		// analytics
-		include_once( $vendor_dir . 'chrico/frontend/analytics.php' );
-		add_action( 'wp_footer', 'chrico_filter_wp_footer_add_google_analytics' );
-
 		// remove some unused wp-stuff
 		remove_action( 'wp_head', 'rsd_link' );
 		remove_action( 'wp_head', 'wp_generator' );

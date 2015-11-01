@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 2.1
+* Removed analytics from footer.
+
 ### 2.0
 * Removed inline JS.
 
