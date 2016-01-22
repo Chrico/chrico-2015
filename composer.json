@@ -1,0 +1,21 @@
+{
+  "name": "chrico/chrico-2015",
+  "description": "Responsive Theme for ChriCo 2015.",
+  "type": "wordpress-theme",
+  "authors": [
+    {
+      "name": "Chris",
+      "email": "chris@chrico.info",
+      "homepage": "http://www.chrico.info",
+      "role": "developer"
+    }
+  ],
+  "support": {
+    "email": "chris@chrico.info",
+    "issues": "https://github.com/Chrico/chrico-2015/issues",
+    "source": "https://github.com/Chrico/chrico-2015/"
+  },
+  "require": {
+    "php": ">=5.5"
+  }
+}
