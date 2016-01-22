@@ -6,8 +6,14 @@
     {
       "name": "Chris",
       "email": "chris@chrico.info",
-      "homepage": "http://www.chrico.info",
+      "homepage": "https://www.chrico.info",
       "role": "developer"
+    },
+    {
+      "name": "Cora",
+      "email": "cora@chrico.info",
+      "homepage": "https://www.chrico.info",
+      "role": "designer"
     }
   ],
   "support": {
