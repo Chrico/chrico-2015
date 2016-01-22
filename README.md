@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.2
+* Added composer.json to theme.
+* Added Author-Widget to theme.
+
 ### 2.1
 * Removed analytics from footer.
 

@@ -59,6 +59,7 @@ function chrico_setup() {
 	// widget
 	include_once( $vendor_dir . 'chrico/widget.php' );
 	add_action( 'widgets_init', 'chrico_widgets_init' );
+	add_action( 'widgets_init', 'chrico_register_widgets' );
 
 	// adding editor styles
 	$style = get_template_directory_uri() . '/assets/css/';
