@@ -194,11 +194,11 @@ module.exports = function( grunt ) {
 		'uglify'
 	] );
 	grunt.registerTask( 'css', [
-		'sass:theme',
+		'sass',
 		'autoprefixer',
 		'lineending',
 		'combine_mq',
-		'cssmin:theme'
+		'cssmin'
 	] );
 	grunt.registerTask( 'image', [ 'imagemin', 'svgmin' ] );
 
