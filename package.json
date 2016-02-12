@@ -22,6 +22,10 @@
     "grunt-lodash": "^0.4.0",
     "grunt-svgmin": "^2.0.1",
     "lodash-cli": "^3.7.0",
+    "grunt-babel": "*",
+    "babel-preset-es2015-loose": "*",
+    "babelify": "^6.1.0",
+    "grunt-browserify": "^3.8.0",
     "matchdep": "*"
   },
   "dependencies": {

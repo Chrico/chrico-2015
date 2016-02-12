@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 2.3
+* Updated baguette.js to 1.5.0.
+* Updated fontobserver.js.
+* Improved loading of Navigation.js.
+* Introduced es6 class for Navigation.js
+
 ### 2.2
 * Added composer.json to theme.
 * Added Author-Widget to theme.

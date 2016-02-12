@@ -46,7 +46,6 @@ function chrico_widgets_init() {
 	return $GLOBALS[ 'wp_registered_sidebars' ];
 }
 
-
 /**
  * registering the widgets
  *
@@ -54,7 +53,7 @@ function chrico_widgets_init() {
  *
  * @return void
  */
-function chrico_register_widgets(){
+function chrico_register_widgets() {
 
 	include_once( __DIR__ . '/frontend/Widget/Author.php' );
 	register_widget( 'Chrico_Frontend_Widget_Author' );

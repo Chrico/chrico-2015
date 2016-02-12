@@ -52,7 +52,7 @@ function chrico_wp_enqueue_scripts() {
 /**
  * Returning our Scripts
  *
- * @return  Array $scripts
+ * @return  array $scripts
  */
 function chrico_get_scripts() {
 
@@ -63,37 +63,20 @@ function chrico_get_scripts() {
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'in_footer' => $in_footer )
 	$scripts = array();
 
-	// adding some polyfills
-	$scripts[ 'chrico-polyfills' ] = array(
-		'src'       => $js_uri . 'polyfills' . $suffix . '.js',
-		'deps'      => NULL,
-		'version'   => $version,
-		'in_footer' => TRUE,
-		'data'      => array(
-			'loadJS' => TRUE,
-		)
-	);
-
 	// adding some addons
 	$scripts[ 'chrico-addons' ] = array(
 		'src'       => $js_uri . 'addons' . $suffix . '.js',
-		'deps'      => array( 'chrico-polyfills' ),
+		'deps'      => array(),
 		'version'   => $version,
-		'in_footer' => TRUE,
-		'data'      => array(
-			'loadJS' => TRUE,
-		)
+		'in_footer' => TRUE
 	);
 
 	// adding the theme stuff
 	$scripts[ 'chrico-theme' ] = array(
 		'src'       => $js_uri . 'theme' . $suffix . '.js',
-		'deps'      => array( 'chrico-polyfills', 'chrico-addons' ),
+		'deps'      => array( 'chrico-addons' ),
 		'version'   => $version,
-		'in_footer' => TRUE,
-		'data'      => array(
-			'loadJS' => TRUE,
-		)
+		'in_footer' => TRUE
 	);
 
 	// adding the theme stuff

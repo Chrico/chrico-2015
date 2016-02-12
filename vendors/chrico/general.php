@@ -16,7 +16,6 @@ function chrico_get_script_suffix() {
 	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 }
 
-
 /**
  * getting the script version for debug- or live-mode
  *
