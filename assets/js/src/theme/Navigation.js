@@ -115,24 +115,3 @@ var Navigation = function () {
 }();
 
 new Navigation();
-
-// Fonts _________________________________________
-// requires addon/fontobserver.js
-//
-(
-	function( body ) {
-		"use strict";
-		var observer = new FontFaceObserver( 'Imprima', {} );
-		observer.check().then( function() {
-			body.classList.add( 'font-imprima--is-loaded' );
-		} );
-	}
-)( document.body );
-// Gallery Popup-Stuff _________________________________________
-// requires addon/baguette.js
-(
-	function() {
-		"use strict";
-		baguetteBox.run( '.chrico-gallery' );
-	}
-)();
