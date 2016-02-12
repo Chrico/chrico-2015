@@ -39,7 +39,7 @@
 					a.innerHTML = '<xyz></xyz>';
 					//if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
 					supportsHtml5Styles = (
-					'hidden' in a
+						'hidden' in a
 					);
 
 					supportsUnknownElements = a.childNodes.length == 1 || (
@@ -286,7 +286,7 @@
 			 * @type Boolean
 			 */
 			'shivCSS': (
-			options.shivCSS !== false
+				options.shivCSS !== false
 			),
 
 			/**
@@ -303,7 +303,7 @@
 			 * @type Boolean
 			 */
 			'shivMethods': (
-			options.shivMethods !== false
+				options.shivMethods !== false
 			),
 
 			/**

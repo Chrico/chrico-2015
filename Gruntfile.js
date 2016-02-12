@@ -58,7 +58,7 @@ module.exports = function( grunt ) {
 					'Safari >= 5.0'
 				]
 			},
-			theme  : {
+			dist   : {
 				expand: true,
 				cwd   : THEME_DIR,
 				dest  : THEME_DIR,
@@ -70,7 +70,7 @@ module.exports = function( grunt ) {
 			}
 		},
 		cssmin      : {
-			theme: {
+			dist: {
 				options: {
 					processImport: true
 				},
@@ -89,7 +89,7 @@ module.exports = function( grunt ) {
 			grunt: {
 				src: [ 'Gruntfile.js' ]
 			},
-			theme: {
+			dist : {
 				expand: true,
 				cwd   : THEME_DIR,
 				src   : [
@@ -99,25 +99,31 @@ module.exports = function( grunt ) {
 				]
 			}
 		},
+		babel       : {
+			options: {
+				sourceMap: false,
+				comments : true,
+				presets  : [ "es2015-loose" ]
+			},
+			dist   : {
+				files: {
+					"./assets/js/src/theme/Navigation.js": "./assets/js/src/theme/Navigation.es6"
+				}
+			}
+		},
 		concat      : {
-			options : {
+			options: {
 				separator: '\n'
 			},
-			jquery  : {
-				src : THEME_DIR + 'assets/js/src/addon/*.js',
-				dest: THEME_DIR + 'assets/js/addons.js'
-			},
-			polyfill: {
-				src : THEME_DIR + 'assets/js/src/polyfill/*.js',
-				dest: THEME_DIR + 'assets/js/polyfills.js'
-			},
-			theme   : {
-				src : THEME_DIR + 'assets/js/src/theme/*.js',
-				dest: THEME_DIR + 'assets/js/theme.js'
+			dist   : {
+				files: {
+					'./assets/js/addons.js': './assets/js/src/addon/*.js',
+					'./assets/js/theme.js' : './assets/js/src/theme/*.js'
+				}
 			}
 		},
 		sass        : {
-			theme: {
+			dist: {
 				expand : true,
 				cwd    : THEME_DIR + 'assets/scss/',
 				dest   : THEME_DIR + 'assets/css/',
@@ -134,7 +140,7 @@ module.exports = function( grunt ) {
 			}
 		},
 		uglify      : {
-			theme: {
+			dist: {
 				expand: true,
 				cwd   : THEME_DIR,
 				dest  : THEME_DIR,
@@ -151,7 +157,7 @@ module.exports = function( grunt ) {
 			}
 		},
 		lineending  : {
-			theme: {
+			dist: {
 				expand : true,
 				cwd    : THEME_DIR,
 				dest   : THEME_DIR,
@@ -182,11 +188,15 @@ module.exports = function( grunt ) {
 	// Register tasks
 
 	grunt.registerTask( 'javascript-testing', [ 'jshint' ] );
-	grunt.registerTask( 'javascript', [ 'concat:jquery', 'concat:polyfill', 'concat:theme', 'uglify:theme' ] );
+	grunt.registerTask( 'javascript', [
+		'babel',
+		'concat',
+		'uglify'
+	] );
 	grunt.registerTask( 'css', [
 		'sass:theme',
-		'autoprefixer:theme',
-		'lineending:theme',
+		'autoprefixer',
+		'lineending',
 		'combine_mq',
 		'cssmin:theme'
 	] );
