@@ -1,4 +1,4 @@
-import Baguette from './_Baguette';
+import Baguette from './Baguette';
 import FontObserver from './FontFaceObserver';
 import Navigation from './Navigation.js';
 
