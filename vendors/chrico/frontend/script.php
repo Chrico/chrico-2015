@@ -63,18 +63,9 @@ function chrico_get_scripts() {
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'in_footer' => $in_footer )
 	$scripts = array();
 
-	// adding some addons
-	$scripts[ 'chrico-addons' ] = array(
-		'src'       => $js_uri . 'addons' . $suffix . '.js',
+	$scripts[ 'chrico' ] = array(
+		'src'       => $js_uri . '/build' . $suffix . '.js',
 		'deps'      => array(),
-		'version'   => $version,
-		'in_footer' => TRUE
-	);
-
-	// adding the theme stuff
-	$scripts[ 'chrico-theme' ] = array(
-		'src'       => $js_uri . 'theme' . $suffix . '.js',
-		'deps'      => array( 'chrico-addons' ),
 		'version'   => $version,
 		'in_footer' => TRUE
 	);
