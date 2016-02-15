@@ -99,26 +99,15 @@ module.exports = function( grunt ) {
 				]
 			}
 		},
-		babel       : {
-			options: {
-				sourceMap: false,
-				comments : true,
-				presets  : [ "es2015-loose" ]
-			},
-			dist   : {
-				files: {
-					"./assets/js/src/theme/Navigation.js": "./assets/js/src/theme/Navigation.es6"
-				}
-			}
-		},
-		concat      : {
-			options: {
-				separator: '\n'
-			},
-			dist   : {
-				files: {
-					'./assets/js/addons.js': './assets/js/src/addon/*.js',
-					'./assets/js/theme.js' : './assets/js/src/theme/*.js'
+		browserify : {
+			dist: {
+				options: {
+					transform: [
+						[ "babelify", { loose: "all" } ]
+					]
+				},
+				files  : {
+					"./assets/js/build.js": "./assets/js/src/index.js"
 				}
 			}
 		},
@@ -189,8 +178,7 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'javascript-testing', [ 'jshint' ] );
 	grunt.registerTask( 'javascript', [
-		'babel',
-		'concat',
+		'browserify',
 		'uglify'
 	] );
 	grunt.registerTask( 'css', [
