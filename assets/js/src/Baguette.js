@@ -44,7 +44,7 @@
 			afterHide             : null,
 			// callback when image changes with `currentIndex` and `imagesElements.length` as parameters
 			onChange              : null,
-			overlayBackgroundColor: 'rgba(0, 0, 0, .8)',
+			overlayBackgroundColor: 'rgba(0, 0, 0, .8)'
 		};
 		// Object containing information about features compatibility
 		var supports = {};
@@ -67,6 +67,8 @@
 		var imagesElements = [];
 		// Event handlers
 		var imagedEventHandlers = {};
+		var imageElement;
+		var imageSrc;
 		var overlayClickHandler = function( event ) {
 			// When clicked on the overlay (outside displayed image) close it
 			if ( event.target && event.target.nodeName !== 'IMG' && event.target.nodeName !== 'FIGCAPTION' ) {
@@ -113,7 +115,7 @@
 				hideOverlay();
 			}
 		};
-		var touchendHandler = function( event ) {
+		var touchendHandler = function() {
 			touchFlag = false;
 		};
 
@@ -185,9 +187,9 @@
 
 		function unbindImageClickListeners() {
 			galleries.forEach( function( gallery ) {
-				[].forEach.call( gallery, function( galleryElement ) {
+				[].forEach.call( gallery, function() {
 					var galleryID = imagesMap.length - 1;
-					[].forEach.call( imagesMap[ galleryID ], function( imageElement, imageIndex ) {
+					[].forEach.call( imagesMap[ galleryID ], function( imageElement ) {
 						unbind( imageElement, 'click', imagedEventHandlers[ galleryID + '_' + imageElement ] );
 					} );
 					imagesMap.pop();
@@ -408,7 +410,7 @@
 				return;
 			}
 			// Get element reference, optional caption and source path
-			window.imageElement = imagesMap[ currentGallery ][ index ];
+			imageElement = imagesMap[ currentGallery ][ index ];
 			var imageCaption = (
 				typeof(
 					options.captions
@@ -416,7 +418,7 @@
 			) ?
 				options.captions.call( imagesMap[ currentGallery ], imageElement ) :
 			imageElement.getAttribute( 'data-caption' ) || imageElement.title;
-			window.imageSrc = getImageSrc( imageElement );
+			imageSrc = getImageSrc( imageElement );
 			// Prepare image container elements
 			var figure = create( 'figure' );
 			var image = create( 'img' );
@@ -466,7 +468,7 @@
 					}
 				}
 				// Sort resolutions ascending
-				window.keys = Object.keys( srcs ).sort( function( a, b ) {
+				var keys = Object.keys( srcs ).sort( function( a, b ) {
 					return parseInt( a ) < parseInt( b ) ? -1 : 1;
 				} );
 				// Get real screen resolution

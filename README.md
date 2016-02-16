@@ -3,6 +3,7 @@
 ## Changelog
 
 ### 2.4
+* improved visibility of variables in `Baguette.js` 
 * One `build.js` to rule them all. Browserify'ed.
 * Smaller fixes on Baguette.js to replace it later with some self-written lightbox-script.
 
