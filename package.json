@@ -1,0 +1,37 @@
+
+{
+  "name": "chrico-2015",
+  "description": "ChriCo WordPress-Theme",
+  "author": "ChriCo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChriCo/chrico-2015"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.0",
+    "grunt-combine-mq": "^0.9.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "*",
+    "grunt-lineending": "*",
+    "grunt-lodash": "^0.4.0",
+    "grunt-svgmin": "^2.0.1",
+    "lodash-cli": "^3.7.0",
+    "babelify": "^6.1.0",
+    "grunt-browserify": "^3.8.0",
+    "matchdep": "*"
+  },
+  "dependencies": {
+    "grunt-autoprefixer": "^3.0.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "^0.11.2",
+    "imagemin-svgo": "^4.1.2",
+    "matchdep": "*"
+  }
+}
