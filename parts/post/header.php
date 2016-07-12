@@ -17,8 +17,7 @@
 	endif;
 	?>
 	<<?php echo $tag; ?> class="chrico-post__title">
-	<a class="chrico-post__link" href="<?php the_permalink() ?>" title="<?php echo esc_attr( the_title() ) ?>"
-		rel="bookmark">
+	<a class="chrico-post__link" href="<?php the_permalink() ?>" rel="bookmark">
 		<?php the_title(); ?>
 	</a>
 </<?php echo $tag; ?>>

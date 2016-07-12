@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 2.4.1
+* Removed `title`-attribute from permalink.
+
 ### 2.4
 * improved visibility of variables in `Baguette.js` 
 * One `build.js` to rule them all. Browserify'ed.
