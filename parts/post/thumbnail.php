@@ -18,8 +18,7 @@ endif;
 
 	<?php else : ?>
 
-		<a class="chrico-post__link chrico-post__thumbnail-link" href="<?php the_permalink() ?>"
-			title="<?php echo esc_attr( the_title() ) ?>" rel="bookmark">
+		<a class="chrico-post__link chrico-post__thumbnail-link" href="<?php the_permalink() ?>">
 			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 			<?php
 			/*
