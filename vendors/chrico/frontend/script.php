@@ -64,7 +64,7 @@ function chrico_get_scripts() {
 	$scripts = array();
 
 	$scripts[ 'chrico' ] = array(
-		'src'       => $js_uri . '/build' . $suffix . '.js',
+		'src'       => $js_uri . 'build' . $suffix . '.js',
 		'deps'      => array(),
 		'version'   => $version,
 		'in_footer' => TRUE

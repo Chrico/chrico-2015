@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 2.4.2
+* Removed trailing slash from JS file.
+
 ### 2.4.1
 * Removed `title`-attribute from permalink.
 
