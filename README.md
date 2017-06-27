@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.4.2
+* Removed deprecated google analytics integration.
+* Added GTM.
+
 ### 2.4.1
 * Removed `title`-attribute from permalink.
 
