@@ -7,7 +7,8 @@
 * Inline SVG of logo to save the request.
 
 ### 2.4.2
-* Removed trailing slash from JS file.
+* Removed deprecated google analytics integration.
+* Added GTM.
 
 ### 2.4.1
 * Removed `title`-attribute from permalink.
