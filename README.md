@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.5.0
+* Moved fonts from google fonts into theme to avoid request to fonts.google.com
+* Inline SVG of logo to save the request.
+
 ### 2.4.2
 * Removed trailing slash from JS file.
 

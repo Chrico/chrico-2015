@@ -584,7 +584,7 @@ body.mce-content-body,html.mce-content-body {
 }
 
 @font-face {
-  font-family:'Imprima';font-style:normal;font-weight:400;src:local("Imprima"), local("Imprima-Regular"), url(//fonts.gstatic.com/s/imprima/v4/RenkfKeNSXel7M9RBRtM1w.woff2) format("woff2"), url(//fonts.gstatic.com/s/imprima/v4/8ZNQ9eOlWj2xmC8HToxmXw.woff) format("woff");
+  font-family:'Imprima';font-style:normal;font-weight:400;src:local("Imprima"), local("Imprima-Regular"), url(/wp-content/themes/chrico-2015/assets/fonts/RenkfKeNSXel7M9RBRtM1w.woff2) format("woff2"), url(/wp-content/themes/chrico-2015/assets/fonts/8ZNQ9eOlWj2xmC8HToxmXw.woff) format("woff");
 }
 
 @media (max-width: 64em) {
