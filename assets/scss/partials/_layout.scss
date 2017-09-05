@@ -17,10 +17,16 @@ html {
 
 //****************************************************************************
 // ______________ Body
-
+.js body.no-webp,
+.no-js body {
+	background-image: url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
+}
+.js body.webp {
+	background-image: url("/wp-content/themes/chrico-2015/assets/img/pattern.webp");
+}
 body {
 	font: 15px/1.7 Tahoma, Arial, sans-serif;
-	background: $color-01 url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
+	background-color: $color-01;
 	color: $color-05;
 	position: relative;
 

@@ -1066,4 +1066,13 @@ new _NavigationJs2['default']();
 // init gallery
 _Baguette2['default'].run('.chrico-gallery');
 
+var webp = new Image();
+webp.onerror = function () {
+	document.body.className += ' no-webp';
+};
+webp.onload = function () {
+	document.body.className += ' webp';
+};
+webp.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
+
 },{"./Baguette":1,"./FontFaceObserver":2,"./Navigation.js":3}]},{},[4]);

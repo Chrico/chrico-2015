@@ -13,3 +13,12 @@ new Navigation();
 
 // init gallery
 Baguette.run( '.chrico-gallery' );
+
+const webp = new Image();
+webp.onerror = function() {
+	document.body.className += ' no-webp'
+};
+webp.onload = function() {
+	document.body.className += ' webp'
+};
+webp.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';

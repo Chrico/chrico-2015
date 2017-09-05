@@ -22,7 +22,7 @@
 		wp_enqueue_script( 'comment-reply' );
 	endif; ?>
 	<?php wp_head(); ?>
-
+	<script>document.documentElement.className = document.documentElement.className.replace( "no-js", "js" );</script>
 </head>
 <body <?php body_class(); ?>>
 <?php chrico_the_svg_icons(); ?>

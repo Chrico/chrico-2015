@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 2.6.0
+* Added support for `webp`-background image.
+
 ### 2.5.0
 * Moved fonts from google fonts into theme to avoid request to fonts.google.com
 * Inline SVG of logo to save the request.

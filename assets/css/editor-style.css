@@ -285,9 +285,17 @@ td {
   box-sizing: border-box;
 }
 
+.js body.no-webp,.js html.no-webp,.no-js body,.no-js html {
+  background-image: url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
+}
+
+.js body.webp,.js html.webp {
+  background-image: url("/wp-content/themes/chrico-2015/assets/img/pattern.webp");
+}
+
 body,html {
   font: 15px/1.7 Tahoma, Arial, sans-serif;
-  background: #dadada url("/wp-content/themes/chrico-2015/assets/img/pattern.png");
+  background-color: #dadada;
   color: #303030;
   position: relative;
 }
